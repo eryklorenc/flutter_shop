@@ -14,6 +14,45 @@ class RootCubit extends Cubit<RootState> {
           ),
         );
 
+        
+        Future<void> register(
+      {required String email, required String password}) async {
+    try {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+    } catch (error) {
+      emit(
+        RootState(
+          user: null,
+          isLoading: false,
+          errorMessage: error.toString(),
+        ),
+      );
+    }
+  }
+
+  Future<void> signIn({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+    } catch (error) {
+      emit(
+        RootState(
+          user: null,
+          isLoading: false,
+          errorMessage: error.toString(),
+        ),
+      );
+    }
+  }
+
   StreamSubscription? _streamSubscription;
 
   Future<void> signOut() async {
