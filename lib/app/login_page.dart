@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_shop/app/cubit/root_cubit.dart';
+import 'package:flutter_shop/app/cubit/auth_cubit.dart';
+import 'package:flutter_shop/repositories/login_repository.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -20,8 +21,8 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => RootCubit(),
-      child: BlocBuilder<RootCubit, RootState>(
+      create: (context) => AuthCubit(LoginRepository()),
+      child: BlocBuilder<AuthCubit, AuthState>(
         builder: (context, state) {
           return Scaffold(
             resizeToAvoidBottomInset: false,
@@ -143,7 +144,7 @@ class _LoginPageState extends State<LoginPage> {
                         onPressed: () async {
                           if (isCreatingAccount == true) {
                             try {
-                              context.read<RootCubit>().register(
+                              context.read<AuthCubit>().register(
                                     email: emailController.text,
                                     password: passwordController.text,
                                   );
@@ -154,7 +155,7 @@ class _LoginPageState extends State<LoginPage> {
                             }
                           } else {
                             try {
-                              context.read<RootCubit>().signIn(
+                              context.read<AuthCubit>().signIn(
                                     email: emailController.text,
                                     password: passwordController.text,
                                   );

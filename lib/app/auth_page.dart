@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_shop/app/cubit/root_cubit.dart';
+import 'package:flutter_shop/app/cubit/auth_cubit.dart';
 import 'package:flutter_shop/app/login_page.dart';
+import 'package:flutter_shop/repositories/login_repository.dart';
 
 class RootPage extends StatelessWidget {
   const RootPage({super.key});
@@ -9,8 +10,8 @@ class RootPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-        create: (context) => RootCubit()..start(),
-        child: BlocBuilder<RootCubit, RootState>(builder: (context, state) {
+        create: (context) => AuthCubit(LoginRepository())..start(),
+        child: BlocBuilder<AuthCubit, AuthState>(builder: (context, state) {
           final user = state.user;
           if (user == null) {
             return const LoginPage();
@@ -20,7 +21,7 @@ class RootPage extends StatelessWidget {
             body: Center(
               child: ElevatedButton(
                 onPressed: () {
-                  context.read<RootCubit>().signOut();
+                  context.read<AuthCubit>().signOut();
                 },
                 child: const Text('Wyloguj'),
               ),
