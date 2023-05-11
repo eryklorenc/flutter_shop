@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/cubit/auth_cubit.dart';
 import 'package:flutter_shop/app/login_page.dart';
+import 'package:flutter_shop/navigations/tabbar.dart';
 import 'package:flutter_shop/repositories/login_repository.dart';
 
-class RootPage extends StatelessWidget {
-  const RootPage({super.key});
+class AuthPage extends StatelessWidget {
+  const AuthPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,17 +17,7 @@ class RootPage extends StatelessWidget {
           if (user == null) {
             return const LoginPage();
           }
-
-          return Scaffold(
-            body: Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  context.read<AuthCubit>().signOut();
-                },
-                child: const Text('Wyloguj'),
-              ),
-            ),
-          );
+          return const Tabbar();
         }));
   }
 }

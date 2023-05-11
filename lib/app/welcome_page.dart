@@ -57,7 +57,7 @@ class WelcomePage extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (_) => const RootPage(),
+                      builder: (_) => const AuthPage(),
                     ),
                   );
                 },
