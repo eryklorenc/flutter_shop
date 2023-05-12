@@ -63,7 +63,6 @@ class _TabbarState extends State<Tabbar> {
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
             label: 'Profile',
-            
           ),
         ],
       ),
