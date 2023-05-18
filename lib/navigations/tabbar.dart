@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/cubit/auth_cubit.dart';
+import 'package:flutter_shop/screens/home/home.dart';
 
 class Tabbar extends StatefulWidget {
   const Tabbar({
@@ -19,9 +20,7 @@ class _TabbarState extends State<Tabbar> {
     return Scaffold(
       body: Builder(builder: (context) {
         if (currentIndex == 0) {
-          return const Scaffold(
-            body: Center(child: Text('sklep')),
-          );
+          return const HomePage();
         }
         if (currentIndex == 1) {
           return const Scaffold(
