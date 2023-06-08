@@ -6,9 +6,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFf9f9f9),
+      backgroundColor: const Color(0xFFf9f9f9),
       appBar: AppBar(
-        backgroundColor: Color(0xFFf9f9f9),
+        backgroundColor: const Color(0xFFf9f9f9),
         elevation: 0.0,
         title: const Text(
           'Flutter Shoes',
@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.menu),
+          icon: const Icon(Icons.menu),
           color: Colors.black,
         ),
       ),
