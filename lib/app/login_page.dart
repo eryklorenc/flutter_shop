@@ -202,9 +202,9 @@ class _LoginPageState extends State<LoginPage> {
                             isCreatingAccount = false;
                           });
                         },
-                        child: Row(
+                        child: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
+                          children:  [
                             Text(
                               'Already have an account?',
                               style: TextStyle(
@@ -233,9 +233,9 @@ class _LoginPageState extends State<LoginPage> {
                             isCreatingAccount = true;
                           });
                         },
-                        child: Row(
+                        child: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
+                          children:  [
                             Text(
                               "Don't have an account?",
                               style: TextStyle(
