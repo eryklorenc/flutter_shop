@@ -7,6 +7,9 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
+bool menButtonSelected = false;
+bool womenButtonSelected = false;
+
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
@@ -47,7 +50,18 @@ class _HomePageState extends State<HomePage> {
                 Row(
                   children: [
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          menButtonSelected = true;
+                          womenButtonSelected = false;
+                        });
+                      },
+                      style: menButtonSelected
+                          ? ButtonStyle(
+                              foregroundColor:
+                                  MaterialStateProperty.all<Color>(Colors.grey),
+                            )
+                          : null,
                       child: const Text(
                         'Men',
                         style: TextStyle(
@@ -58,7 +72,18 @@ class _HomePageState extends State<HomePage> {
                       width: 20.0,
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          womenButtonSelected = true;
+                          menButtonSelected = false;
+                        });
+                      },
+                      style: womenButtonSelected
+                          ? ButtonStyle(
+                              foregroundColor:
+                                  MaterialStateProperty.all<Color>(Colors.grey),
+                            )
+                          : null,
                       child: const Text(
                         'Women',
                         style: TextStyle(
@@ -66,9 +91,9 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ],
-                )
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),
