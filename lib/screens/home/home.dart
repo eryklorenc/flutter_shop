@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop/screens/widgets/recommended_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -34,7 +35,7 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(25),
+            padding: const EdgeInsets.all(16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -101,7 +102,8 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          Column(
+          const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
                 padding: EdgeInsets.all(16),
@@ -120,7 +122,26 @@ class _HomePageState extends State<HomePage> {
                   horizontal: 20,
                 ),
                 child: Row(
-                  children: [],
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    RecommendedCard(),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    RecommendedCard(),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    RecommendedCard(),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    RecommendedCard(),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    RecommendedCard(),
+                  ],
                 ),
               )
             ],
