@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: const Color(0xFFf9f9f9),
         elevation: 0.0,
         title: const Text(
-          'Flutter Shoes',
+          'Flutter Clothes',
           style: TextStyle(
             color: Colors.black,
           ),
@@ -181,8 +181,75 @@ class _HomePageState extends State<HomePage> {
             height: 15,
           ),
           const Divider(
-            thickness: 10,
-          )
+            thickness: 2,
+          ),
+          const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                'Best Selling',
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16,
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Image(
+                      image: AssetImage('assets/start1.jpg'),
+                      width: 150,
+                      height: 200,
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      'Orange Hoodie',
+                      style: Theme.of(context).textTheme.titleSmall,
+                      softWrap: true,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                    ),
+                    Text(
+                      "30€",
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Image(
+                      image: AssetImage('assets/start1.jpg'),
+                      width: 150,
+                      height: 200,
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      'Orange Hoodie',
+                      style: Theme.of(context).textTheme.titleSmall,
+                      softWrap: true,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                    ),
+                    Text(
+                      "30€",
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
