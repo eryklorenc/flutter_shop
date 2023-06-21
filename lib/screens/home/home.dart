@@ -52,47 +52,75 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Row(
                       children: [
-                        TextButton(
-                          onPressed: () {
-                            setState(() {
-                              menButtonSelected = true;
-                              womenButtonSelected = false;
-                            });
-                          },
-                          style: menButtonSelected
-                              ? ButtonStyle(
-                                  foregroundColor:
-                                      MaterialStateProperty.all<Color>(
-                                          Colors.orange),
-                                )
-                              : null,
-                          child: const Text(
-                            'Men',
-                            style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
+                        Container(
+                          decoration: const BoxDecoration(
+                            color: Color.fromARGB(
+                              255,
+                              221,
+                              219,
+                              219,
+                            ),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(5),
+                            ),
+                          ),
+                          child: TextButton(
+                            onPressed: () {
+                              setState(() {
+                                menButtonSelected = true;
+                                womenButtonSelected = false;
+                              });
+                            },
+                            style: menButtonSelected
+                                ? ButtonStyle(
+                                    foregroundColor:
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.orange),
+                                  )
+                                : null,
+                            child: const Text(
+                              'Men',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
                         ),
                         const SizedBox(
                           width: 20.0,
                         ),
-                        TextButton(
-                          onPressed: () {
-                            setState(() {
-                              womenButtonSelected = true;
-                              menButtonSelected = false;
-                            });
-                          },
-                          style: womenButtonSelected
-                              ? ButtonStyle(
-                                  foregroundColor:
-                                      MaterialStateProperty.all<Color>(
-                                          Colors.orange),
-                                )
-                              : null,
-                          child: const Text(
-                            'Women',
-                            style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
+                        Container(
+                          decoration: const BoxDecoration(
+                            color: Color.fromARGB(
+                              255,
+                              221,
+                              219,
+                              219,
+                            ),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(5),
+                            ),
+                          ),
+                          child: TextButton(
+                            onPressed: () {
+                              setState(() {
+                                womenButtonSelected = true;
+                                menButtonSelected = false;
+                              });
+                            },
+                            style: womenButtonSelected
+                                ? ButtonStyle(
+                                    foregroundColor:
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.orange),
+                                  )
+                                : null,
+                            child: const Text(
+                              'Women',
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
+                            ),
                           ),
                         ),
                       ],
@@ -111,7 +139,10 @@ class _HomePageState extends State<HomePage> {
                   alignment: Alignment.topLeft,
                   child: Text(
                     'Recommended for you',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black),
                   ),
                 ),
               ),
@@ -146,6 +177,12 @@ class _HomePageState extends State<HomePage> {
               )
             ],
           ),
+          const SizedBox(
+            height: 15,
+          ),
+          const Divider(
+            thickness: 10,
+          )
         ],
       ),
     );
