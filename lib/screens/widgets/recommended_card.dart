@@ -10,10 +10,13 @@ class RecommendedCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Image(
-            image: AssetImage('assets/start1.jpg'),
-            width: 100,
-            height: 140,
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: const Image(
+              image: AssetImage('assets/start1.jpg'),
+              width: 100,
+              height: 140,
+            ),
           ),
           const SizedBox(
             height: 5,

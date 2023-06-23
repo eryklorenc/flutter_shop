@@ -206,10 +206,13 @@ class _HomePageState extends State<HomePage> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Image(
-                      image: AssetImage('assets/start1.jpg'),
-                      width: 150,
-                      height: 200,
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(30),
+                      child: const Image(
+                        image: AssetImage('assets/start1.jpg'),
+                        width: 150,
+                        height: 200,
+                      ),
                     ),
                     const SizedBox(height: 5),
                     Text(
@@ -228,10 +231,13 @@ class _HomePageState extends State<HomePage> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Image(
-                      image: AssetImage('assets/start1.jpg'),
-                      width: 150,
-                      height: 200,
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(30),
+                      child: const Image(
+                        image: AssetImage('assets/start1.jpg'),
+                        width: 150,
+                        height: 200,
+                      ),
                     ),
                     const SizedBox(height: 5),
                     Text(
