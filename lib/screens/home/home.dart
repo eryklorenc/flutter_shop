@@ -207,7 +207,7 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(30),
+                      borderRadius: BorderRadius.circular(20),
                       child: const Image(
                         image: AssetImage('assets/start1.jpg'),
                         width: 150,
@@ -232,9 +232,9 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(30),
+                      borderRadius: BorderRadius.circular(20),
                       child: const Image(
-                        image: AssetImage('assets/start1.jpg'),
+                        image: AssetImage('assets/start.jpg'),
                         width: 150,
                         height: 200,
                       ),
