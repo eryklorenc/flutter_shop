@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class RecommendedCard extends StatelessWidget {
-  const RecommendedCard({super.key});
+  final AssetImage image;
+  const RecommendedCard({
+    super.key,
+    required this.image,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -11,9 +15,9 @@ class RecommendedCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(12),
-            child: const Image(
-              image: AssetImage('assets/start1.jpg'),
+            borderRadius: BorderRadius.circular(50),
+            child: Image(
+              image: image,
               width: 100,
               height: 140,
             ),

@@ -155,23 +155,33 @@ class _HomePageState extends State<HomePage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    RecommendedCard(),
+                    RecommendedCard(
+                      image: AssetImage('assets/clothesW3.jpg'),
+                    ),
                     SizedBox(
                       width: 5,
                     ),
-                    RecommendedCard(),
+                    RecommendedCard(
+                      image: AssetImage('assets/clothesW1.jpg'),
+                    ),
                     SizedBox(
                       width: 5,
                     ),
-                    RecommendedCard(),
+                    RecommendedCard(
+                      image: AssetImage('assets/clothesW2.jpg'),
+                    ),
                     SizedBox(
                       width: 5,
                     ),
-                    RecommendedCard(),
+                    RecommendedCard(
+                      image: AssetImage('assets/clothesW3.jpg'),
+                    ),
                     SizedBox(
                       width: 5,
                     ),
-                    RecommendedCard(),
+                    RecommendedCard(
+                      image: AssetImage('assets/clothesW1.jpg'),
+                    ),
                   ],
                 ),
               )
