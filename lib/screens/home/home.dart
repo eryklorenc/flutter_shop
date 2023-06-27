@@ -130,10 +130,10 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          const Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.all(16),
                 child: Align(
                   alignment: Alignment.topLeft,
@@ -146,55 +146,106 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                physics: BouncingScrollPhysics(),
-                padding: EdgeInsets.symmetric(
-                  horizontal: 20,
+              if (womenButtonSelected)
+                const SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  physics: BouncingScrollPhysics(),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 20,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      RecommendedCard(
+                        image: AssetImage('assets/clothesW3.jpg'),
+                        name: 'Black Pants',
+                        price: '20€',
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      RecommendedCard(
+                        image: AssetImage('assets/clothesW1.jpg'),
+                        name: 'Colorful Hoodie',
+                        price: '35€',
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      RecommendedCard(
+                        image: AssetImage('assets/clothesW2.jpg'),
+                        name: 'Black Hoodie',
+                        price: '28€',
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      RecommendedCard(
+                        image: AssetImage('assets/clothesW3.jpg'),
+                        name: 'Black T-shirt',
+                        price: '10€',
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      RecommendedCard(
+                        image: AssetImage('assets/clothesW1.jpg'),
+                        name: 'Hoodie',
+                        price: '30€',
+                      ),
+                    ],
+                  ),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    RecommendedCard(
-                      image: AssetImage('assets/clothesW3.jpg'),
-                      name: 'Black Pants',
-                      price: '20€',
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    RecommendedCard(
-                      image: AssetImage('assets/clothesW1.jpg'),
-                      name: 'Colorful Hoodie',
-                      price: '35€',
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    RecommendedCard(
-                      image: AssetImage('assets/clothesW2.jpg'),
-                      name: 'Black Hoodie',
-                      price: '28€',
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    RecommendedCard(
-                      image: AssetImage('assets/clothesW3.jpg'),
-                      name: 'Black T-shirt',
-                      price: '10€',
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    RecommendedCard(
-                      image: AssetImage('assets/clothesW1.jpg'),
-                      name: 'Hoodie',
-                      price: '30€',
-                    ),
-                  ],
+              if (menButtonSelected)
+                const SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  physics: BouncingScrollPhysics(),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 20,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      RecommendedCard(
+                        image: AssetImage('assets/clothes1.jpg'),
+                        name: 'Black Pants',
+                        price: '24€',
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      RecommendedCard(
+                        image: AssetImage('assets/clothes2.jpg'),
+                        name: 'Black Hoodie',
+                        price: '15€',
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      RecommendedCard(
+                        image: AssetImage('assets/clothes3.jpg'),
+                        name: 'Venom Hoodie',
+                        price: '26€',
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      RecommendedCard(
+                        image: AssetImage('assets/clothes4.jpg'),
+                        name: 'Flame Hoodie',
+                        price: '10€',
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      RecommendedCard(
+                        image: AssetImage('assets/clothes5.jpg'),
+                        name: 'Beige Hoodie',
+                        price: '40€',
+                      ),
+                    ],
+                  ),
                 ),
-              )
             ],
           ),
           const SizedBox(
