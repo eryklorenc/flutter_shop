@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 
 class RecommendedCard extends StatelessWidget {
   final AssetImage image;
+  final String price;
+  final String name;
   const RecommendedCard({
     super.key,
     required this.image,
+    required this.price,
+    required this.name,
   });
 
   @override
@@ -26,14 +30,14 @@ class RecommendedCard extends StatelessWidget {
             height: 5,
           ),
           Text(
-            'Orange Hoodie ',
+            name,
             style: Theme.of(context).textTheme.titleSmall,
             softWrap: true,
             overflow: TextOverflow.ellipsis,
             maxLines: 2,
           ),
           Text(
-            "30€",
+            price,
             style: Theme.of(context).textTheme.bodySmall,
           ),
         ],

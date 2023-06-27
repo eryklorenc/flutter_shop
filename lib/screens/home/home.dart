@@ -157,30 +157,40 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     RecommendedCard(
                       image: AssetImage('assets/clothesW3.jpg'),
+                      name: 'Black Pants',
+                      price: '20€',
                     ),
                     SizedBox(
                       width: 5,
                     ),
                     RecommendedCard(
                       image: AssetImage('assets/clothesW1.jpg'),
+                      name: 'Colorful Hoodie',
+                      price: '35€',
                     ),
                     SizedBox(
                       width: 5,
                     ),
                     RecommendedCard(
                       image: AssetImage('assets/clothesW2.jpg'),
+                      name: 'Black Hoodie',
+                      price: '28€',
                     ),
                     SizedBox(
                       width: 5,
                     ),
                     RecommendedCard(
                       image: AssetImage('assets/clothesW3.jpg'),
+                      name: 'Black T-shirt',
+                      price: '10€',
                     ),
                     SizedBox(
                       width: 5,
                     ),
                     RecommendedCard(
                       image: AssetImage('assets/clothesW1.jpg'),
+                      name: 'Hoodie',
+                      price: '30€',
                     ),
                   ],
                 ),
@@ -233,7 +243,7 @@ class _HomePageState extends State<HomePage> {
                       maxLines: 2,
                     ),
                     Text(
-                      "30€",
+                      "50€",
                       style: Theme.of(context).textTheme.bodySmall,
                     ),
                   ],
@@ -251,14 +261,14 @@ class _HomePageState extends State<HomePage> {
                     ),
                     const SizedBox(height: 5),
                     Text(
-                      'Orange Hoodie',
+                      'Red Handbag',
                       style: Theme.of(context).textTheme.titleSmall,
                       softWrap: true,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                     ),
                     Text(
-                      "30€",
+                      "5€",
                       style: Theme.of(context).textTheme.bodySmall,
                     ),
                   ],
