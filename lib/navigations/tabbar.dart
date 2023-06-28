@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/cubit/auth_cubit.dart';
-import 'package:flutter_shop/screens/home/home.dart';
+import 'package:flutter_shop/features/home/home.dart';
 
 class Tabbar extends StatefulWidget {
   const Tabbar({
