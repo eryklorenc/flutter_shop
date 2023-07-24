@@ -46,20 +46,20 @@ class _LoginPageState extends State<LoginPage> {
                             Icons.arrow_back_ios,
                           ),
                         ),
-                        const SizedBox(
-                          width: 100,
-                        ),
-                        Text(
-                          isCreatingAccount == true ? 'Sign Up' : 'Sign In',
-                          style: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                              color: Color.fromARGB(255, 80, 79, 79)),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 110),
+                          child: Text(
+                            isCreatingAccount == true ? 'Sign Up' : 'Sign In',
+                            style: const TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                                color: Color.fromARGB(255, 80, 79, 79)),
+                          ),
                         ),
                       ],
                     ),
                     const SizedBox(
-                      height: 140,
+                      height: 150,
                     ),
                     Text(
                       isCreatingAccount == true
@@ -204,7 +204,7 @@ class _LoginPageState extends State<LoginPage> {
                         },
                         child: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children:  [
+                          children: [
                             Text(
                               'Already have an account?',
                               style: TextStyle(
@@ -235,7 +235,7 @@ class _LoginPageState extends State<LoginPage> {
                         },
                         child: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children:  [
+                          children: [
                             Text(
                               "Don't have an account?",
                               style: TextStyle(
