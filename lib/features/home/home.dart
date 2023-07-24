@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/features/home/widgets/best_selling_content.dart';
 import 'package:flutter_shop/features/home/widgets/men_button_content.dart';
 import 'package:flutter_shop/features/home/widgets/women_button_content.dart';
@@ -17,21 +18,21 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFf9f9f9),
+      backgroundColor: AppColors.white2,
       appBar: AppBar(
-        backgroundColor: const Color(0xFFf9f9f9),
+        backgroundColor: AppColors.white,
         elevation: 0.0,
         title: const Text(
           'Flutter Clothes',
           style: TextStyle(
-            color: Colors.black,
+            color: AppColors.dark,
           ),
         ),
         centerTitle: true,
         leading: IconButton(
           onPressed: () {},
           icon: const Icon(Icons.menu),
-          color: Colors.black,
+          color: AppColors.dark,
         ),
       ),
       body: Column(
@@ -49,19 +50,14 @@ class _HomePageState extends State<HomePage> {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
-                        color: Colors.black,
+                        color: AppColors.dark,
                       ),
                     ),
                     Row(
                       children: [
                         Container(
                           decoration: const BoxDecoration(
-                            color: Color.fromARGB(
-                              255,
-                              221,
-                              219,
-                              219,
-                            ),
+                            color: AppColors.grey2,
                             borderRadius: BorderRadius.all(
                               Radius.circular(5),
                             ),
@@ -77,7 +73,8 @@ class _HomePageState extends State<HomePage> {
                                 ? ButtonStyle(
                                     foregroundColor:
                                         MaterialStateProperty.all<Color>(
-                                            Colors.orange),
+                                      AppColors.primary,
+                                    ),
                                   )
                                 : null,
                             child: const Text(
@@ -94,12 +91,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Container(
                           decoration: const BoxDecoration(
-                            color: Color.fromARGB(
-                              255,
-                              221,
-                              219,
-                              219,
-                            ),
+                            color: AppColors.grey2,
                             borderRadius: BorderRadius.all(
                               Radius.circular(5),
                             ),
@@ -115,7 +107,8 @@ class _HomePageState extends State<HomePage> {
                                 ? ButtonStyle(
                                     foregroundColor:
                                         MaterialStateProperty.all<Color>(
-                                            Colors.orange),
+                                      AppColors.primary,
+                                    ),
                                   )
                                 : null,
                             child: const Text(
@@ -142,16 +135,15 @@ class _HomePageState extends State<HomePage> {
                   child: Text(
                     'Recommended for you',
                     style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: AppColors.dark,
+                    ),
                   ),
                 ),
               ),
-              if (womenButtonSelected)
-                const WomenButtonContent(),
-              if (menButtonSelected)
-               const MenButtonContent(),
+              if (womenButtonSelected) const WomenButtonContent(),
+              if (menButtonSelected) const MenButtonContent(),
             ],
           ),
           const SizedBox(
@@ -167,9 +159,10 @@ class _HomePageState extends State<HomePage> {
               child: Text(
                 'Best Selling',
                 style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.dark,
+                ),
               ),
             ),
           ),
@@ -179,6 +172,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-
-

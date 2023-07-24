@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/features/welcome_page/welcome_page.dart';
 
 class MyApp extends StatelessWidget {
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           colorScheme: ColorScheme.fromSwatch().copyWith(
-        primary: Colors.black,
+        primary: AppColors.dark,
       )),
       home: const WelcomePage(),
     );

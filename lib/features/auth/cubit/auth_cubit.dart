@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_shop/app/core/enums.dart';
+import 'package:flutter_shop/app/core/config/enums.dart';
 import 'package:flutter_shop/repositories/login_repository.dart';
 
 part 'auth_state.dart';

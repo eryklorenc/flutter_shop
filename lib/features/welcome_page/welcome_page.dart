@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/features/welcome_page/widgets/components/welcome_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,7 +16,7 @@ class WelcomePage extends StatelessWidget {
           image: DecorationImage(
             image: const AssetImage('assets/start1.jpg'),
             colorFilter: ColorFilter.mode(
-                Colors.black.withOpacity(0.8), BlendMode.dstATop),
+                AppColors.dark.withOpacity(0.8), BlendMode.dstATop),
             fit: BoxFit.cover,
           ),
         ),
@@ -30,7 +31,8 @@ class WelcomePage extends StatelessWidget {
               Center(
                 child: Text(
                   'Discover the latest in athletic footwear and apparel',
-                  style: GoogleFonts.teko(color: Colors.orange, fontSize: 18),
+                  style:
+                      GoogleFonts.teko(color: AppColors.primary, fontSize: 18),
                 ),
               ),
               const SizedBox(

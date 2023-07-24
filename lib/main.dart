@@ -3,12 +3,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_shop/app/app.dart';
-import 'package:flutter_shop/app/core/injection_container.dart';
+import 'package:flutter_shop/app/core/utils/injection_container.dart';
 import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-   configureDependencies();
+  configureDependencies();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -23,5 +23,3 @@ void main() async {
 
   runApp(const MyApp());
 }
-
-
