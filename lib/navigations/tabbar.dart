@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/features/auth/cubit/auth_cubit.dart';
 import 'package:flutter_shop/features/home/home.dart';
+import 'package:flutter_shop/generated/l10n.dart';
 
 class Tabbar extends StatefulWidget {
   const Tabbar({
@@ -23,8 +24,10 @@ class _TabbarState extends State<Tabbar> {
           return const HomePage();
         }
         if (currentIndex == 1) {
-          return const Scaffold(
-            body: Center(child: Text('koszyk')),
+          return Scaffold(
+            body: Center(
+              child: Text(S.of(context).koszyk),
+            ),
           );
         }
         if (currentIndex == 2) {
@@ -34,7 +37,7 @@ class _TabbarState extends State<Tabbar> {
                 onPressed: () {
                   context.read<AuthCubit>().signOut();
                 },
-                child: const Text('Wyloguj'),
+                child: Text(S.of(context).wyloguj_sie),
               ),
             ),
           );
@@ -50,18 +53,18 @@ class _TabbarState extends State<Tabbar> {
             currentIndex = newIndex;
           });
         },
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_filled),
-            label: 'Home',
+            icon: const Icon(Icons.home_filled),
+            label: S.of(context).strona_glowna,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart_outlined),
-            label: 'Cart',
+            icon: const Icon(Icons.shopping_cart_outlined),
+            label: S.of(context).koszyk,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            label: 'Profile',
+            icon: const Icon(Icons.person_outline),
+            label: S.of(context).profil,
           ),
         ],
       ),
