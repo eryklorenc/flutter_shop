@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/features/auth/cubit/auth_cubit.dart';
 import 'package:flutter_shop/repositories/login_repository.dart';
 
@@ -53,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                             style: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w500,
-                                color: Color.fromARGB(255, 80, 79, 79)),
+                                color: AppColors.grey),
                           ),
                         ),
                       ],
@@ -89,11 +90,11 @@ class _LoginPageState extends State<LoginPage> {
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(26),
                           borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 185, 182, 182),
+                            color: AppColors.greyLight,
                           ),
                         ),
                         focusedBorder: const OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black),
+                          borderSide: BorderSide(color: AppColors.dark),
                           borderRadius: BorderRadius.all(
                             Radius.circular(26),
                           ),
@@ -101,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                         hintText: 'Email',
                         suffixIcon: const Icon(
                           Icons.email_outlined,
-                          color: Colors.black,
+                          color: AppColors.dark,
                         ),
                       ),
                     ),
@@ -118,17 +119,17 @@ class _LoginPageState extends State<LoginPage> {
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(26),
                           borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 185, 182, 182),
+                            color: AppColors.greyLight,
                           ),
                         ),
                         focusedBorder: const OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black),
+                          borderSide: BorderSide(color: AppColors.dark),
                           borderRadius: BorderRadius.all(Radius.circular(26)),
                         ),
                         hintText: 'Password',
                         suffixIcon: const Icon(
                           Icons.lock_outline,
-                          color: Colors.black,
+                          color: AppColors.dark,
                         ),
                       ),
                       obscureText: true,
@@ -182,11 +183,11 @@ class _LoginPageState extends State<LoginPage> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(31),
                             ),
-                            backgroundColor: Colors.orange),
+                            backgroundColor: AppColors.primary),
                         child: Text(
                           isCreatingAccount == true ? 'Continue' : 'Continue',
                           style: const TextStyle(
-                              color: Colors.white,
+                              color: AppColors.white,
                               fontSize: 16,
                               fontWeight: FontWeight.w700),
                         ),
@@ -208,7 +209,7 @@ class _LoginPageState extends State<LoginPage> {
                             Text(
                               'Already have an account?',
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: AppColors.dark,
                                   fontSize: 16,
                                   fontWeight: FontWeight.w700),
                             ),
@@ -218,7 +219,7 @@ class _LoginPageState extends State<LoginPage> {
                             Text(
                               'Sign in',
                               style: TextStyle(
-                                  color: Colors.orange,
+                                  color: AppColors.primary,
                                   fontSize: 16,
                                   fontWeight: FontWeight.w700),
                             ),
@@ -239,7 +240,7 @@ class _LoginPageState extends State<LoginPage> {
                             Text(
                               "Don't have an account?",
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: AppColors.dark,
                                   fontSize: 16,
                                   fontWeight: FontWeight.w700),
                             ),
@@ -249,7 +250,7 @@ class _LoginPageState extends State<LoginPage> {
                             Text(
                               'Sign up',
                               style: TextStyle(
-                                  color: Colors.orange,
+                                  color: AppColors.primary,
                                   fontSize: 16,
                                   fontWeight: FontWeight.w700),
                             ),

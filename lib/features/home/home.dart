@@ -35,139 +35,146 @@ class _HomePageState extends State<HomePage> {
           color: AppColors.dark,
         ),
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      'Choose \na category',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        color: AppColors.dark,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        'Choose \na category',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: AppColors.dark,
+                        ),
                       ),
-                    ),
-                    Row(
-                      children: [
-                        Container(
-                          decoration: const BoxDecoration(
-                            color: AppColors.grey2,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(5),
+                      Row(
+                        children: [
+                          Container(
+                            decoration: const BoxDecoration(
+                              color: AppColors.grey2,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(5),
+                              ),
                             ),
-                          ),
-                          child: TextButton(
-                            onPressed: () {
-                              setState(() {
-                                menButtonSelected = true;
-                                womenButtonSelected = false;
-                              });
-                            },
-                            style: menButtonSelected
-                                ? ButtonStyle(
-                                    foregroundColor:
-                                        MaterialStateProperty.all<Color>(
-                                      AppColors.primary,
-                                    ),
-                                  )
-                                : null,
-                            child: const Text(
-                              'Men',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
+                            child: TextButton(
+                              onPressed: () {
+                                setState(() {
+                                  menButtonSelected = true;
+                                  womenButtonSelected = false;
+                                });
+                              },
+                              style: menButtonSelected
+                                  ? ButtonStyle(
+                                      foregroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                        AppColors.primary,
+                                      ),
+                                    )
+                                  : null,
+                              child: const Text(
+                                'Men',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        const SizedBox(
-                          width: 20.0,
-                        ),
-                        Container(
-                          decoration: const BoxDecoration(
-                            color: AppColors.grey2,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(5),
+                          const SizedBox(
+                            width: 20.0,
+                          ),
+                          Container(
+                            decoration: const BoxDecoration(
+                              color: AppColors.grey2,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(5),
+                              ),
+                            ),
+                            child: TextButton(
+                              onPressed: () {
+                                setState(() {
+                                  womenButtonSelected = true;
+                                  menButtonSelected = false;
+                                });
+                              },
+                              style: womenButtonSelected
+                                  ? ButtonStyle(
+                                      foregroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                        AppColors.primary,
+                                      ),
+                                    )
+                                  : null,
+                              child: const Text(
+                                'Women',
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
                             ),
                           ),
-                          child: TextButton(
-                            onPressed: () {
-                              setState(() {
-                                womenButtonSelected = true;
-                                menButtonSelected = false;
-                              });
-                            },
-                            style: womenButtonSelected
-                                ? ButtonStyle(
-                                    foregroundColor:
-                                        MaterialStateProperty.all<Color>(
-                                      AppColors.primary,
-                                    ),
-                                  )
-                                : null,
-                            child: const Text(
-                              'Women',
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Padding(
-                padding: EdgeInsets.all(16),
-                child: Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    'Recommended for you',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: AppColors.dark,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(16),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      'Recommended for you',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.dark,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              if (womenButtonSelected) const WomenButtonContent(),
-              if (menButtonSelected) const MenButtonContent(),
-            ],
-          ),
-          const SizedBox(
-            height: 15,
-          ),
-          const Divider(
-            thickness: 2,
-          ),
-          const Padding(
-            padding: EdgeInsets.all(16.0),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                'Best Selling',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                  color: AppColors.dark,
+                if (womenButtonSelected) const WomenButtonContent(),
+                if (menButtonSelected) const MenButtonContent(),
+              ],
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            const Divider(
+              thickness: 2,
+            ),
+            const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Best Selling',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.dark,
+                  ),
                 ),
               ),
             ),
-          ),
-          const BestSellingContent(),
-        ],
+            const Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: 16,
+              ),
+              child: BestSellingContent(),
+            ),
+          ],
+        ),
       ),
     );
   }
