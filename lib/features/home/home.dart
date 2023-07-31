@@ -13,6 +13,7 @@ class HomePage extends StatefulWidget {
 
 bool menButtonSelected = false;
 bool womenButtonSelected = false;
+const EdgeInsets defaultPadding = EdgeInsets.all(16.0);
 
 class _HomePageState extends State<HomePage> {
   @override
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: AppColors.white,
         elevation: 0.0,
         title: const Text(
-          'Flutter Clothes',
+          'Flutter Shop',
           style: TextStyle(
             color: AppColors.dark,
           ),
@@ -39,7 +40,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(16),
+              padding: defaultPadding,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -130,7 +131,7 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Padding(
-                  padding: EdgeInsets.all(16),
+                  padding: defaultPadding,
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: Text(
@@ -154,7 +155,7 @@ class _HomePageState extends State<HomePage> {
               thickness: 2,
             ),
             const Padding(
-              padding: EdgeInsets.all(16.0),
+              padding: defaultPadding,
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Text(
