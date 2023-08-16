@@ -4,3 +4,8 @@ enum Status {
   success,
   error,
 }
+
+enum CategoryType {
+  men,
+  women,
+}

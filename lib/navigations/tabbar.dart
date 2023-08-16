@@ -21,7 +21,7 @@ class _TabbarState extends State<Tabbar> {
     return Scaffold(
       body: Builder(builder: (context) {
         if (currentIndex == 0) {
-          return const HomePage();
+          return const Home();
         }
         if (currentIndex == 1) {
           return Scaffold(
