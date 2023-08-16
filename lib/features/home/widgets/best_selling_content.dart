@@ -12,7 +12,7 @@ class BestSellingContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(5),
           decoration: BoxDecoration(
             color: AppColors.white,
             borderRadius: BorderRadius.circular(10),
@@ -36,10 +36,10 @@ class BestSellingContent extends StatelessWidget {
                   height: 200,
                 ),
               ),
-              const SizedBox(height: 5),
               Padding(
                 padding: const EdgeInsets.only(
-                  left: 5,
+                  left: 8,
+                  top: 5,
                 ),
                 child: Text(
                   'Orange Hoodie',
@@ -51,7 +51,7 @@ class BestSellingContent extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                  left: 5,
+                  left: 8,
                 ),
                 child: Text(
                   "50€",
@@ -62,7 +62,7 @@ class BestSellingContent extends StatelessWidget {
           ),
         ),
         Container(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(5),
           decoration: BoxDecoration(
             color: AppColors.white,
             borderRadius: BorderRadius.circular(10),
@@ -86,10 +86,10 @@ class BestSellingContent extends StatelessWidget {
                   height: 200,
                 ),
               ),
-              const SizedBox(height: 5),
               Padding(
                 padding: const EdgeInsets.only(
-                  left: 5,
+                  left: 8,
+                  top: 5,
                 ),
                 child: Text(
                   'Red Handbag',
@@ -101,7 +101,7 @@ class BestSellingContent extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                  left: 5,
+                  left: 8,
                 ),
                 child: Text(
                   "5€",
