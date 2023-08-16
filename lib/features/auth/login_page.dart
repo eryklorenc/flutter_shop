@@ -6,7 +6,9 @@ import 'package:flutter_shop/features/auth/cubit/auth_cubit.dart';
 import 'package:flutter_shop/repositories/login_repository.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+  const LoginPage({
+    super.key,
+  });
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -22,7 +24,9 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AuthCubit(LoginRepository()),
+      create: (context) => AuthCubit(
+        LoginRepository(),
+      ),
       child: BlocBuilder<AuthCubit, AuthState>(
         builder: (context, state) {
           return Scaffold(
@@ -52,9 +56,10 @@ class _LoginPageState extends State<LoginPage> {
                           child: Text(
                             isCreatingAccount == true ? 'Sign Up' : 'Sign In',
                             style: const TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
-                                color: AppColors.grey),
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                              color: AppColors.grey,
+                            ),
                           ),
                         ),
                       ],
@@ -67,7 +72,9 @@ class _LoginPageState extends State<LoginPage> {
                           ? 'Register Account'
                           : 'Welcome Back',
                       style: const TextStyle(
-                          fontSize: 23, fontWeight: FontWeight.w500),
+                        fontSize: 23,
+                        fontWeight: FontWeight.w500,
+                      ),
                       textAlign: TextAlign.center,
                     ),
                     Text(
@@ -75,7 +82,9 @@ class _LoginPageState extends State<LoginPage> {
                           ? 'Complete your details'
                           : 'Sign in with your email and password',
                       style: const TextStyle(
-                          fontSize: 12, fontWeight: FontWeight.w300),
+                        fontSize: 12,
+                        fontWeight: FontWeight.w300,
+                      ),
                     ),
                     const SizedBox(
                       height: 50,
@@ -94,7 +103,9 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         focusedBorder: const OutlineInputBorder(
-                          borderSide: BorderSide(color: AppColors.dark),
+                          borderSide: BorderSide(
+                            color: AppColors.dark,
+                          ),
                           borderRadius: BorderRadius.all(
                             Radius.circular(26),
                           ),
@@ -123,8 +134,12 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         focusedBorder: const OutlineInputBorder(
-                          borderSide: BorderSide(color: AppColors.dark),
-                          borderRadius: BorderRadius.all(Radius.circular(26)),
+                          borderSide: BorderSide(
+                            color: AppColors.dark,
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(26),
+                          ),
                         ),
                         hintText: 'Password',
                         suffixIcon: const Icon(
@@ -180,16 +195,18 @@ class _LoginPageState extends State<LoginPage> {
                           }
                         },
                         style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(31),
-                            ),
-                            backgroundColor: AppColors.primary),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(31),
+                          ),
+                          backgroundColor: AppColors.primary,
+                        ),
                         child: Text(
                           isCreatingAccount == true ? 'Continue' : 'Continue',
                           style: const TextStyle(
-                              color: AppColors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w700),
+                            color: AppColors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
                       ),
                     ),
@@ -209,9 +226,10 @@ class _LoginPageState extends State<LoginPage> {
                             Text(
                               'Already have an account?',
                               style: TextStyle(
-                                  color: AppColors.dark,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w700),
+                                color: AppColors.dark,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                              ),
                             ),
                             SizedBox(
                               width: 5,
@@ -219,9 +237,10 @@ class _LoginPageState extends State<LoginPage> {
                             Text(
                               'Sign in',
                               style: TextStyle(
-                                  color: AppColors.primary,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w700),
+                                color: AppColors.primary,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                              ),
                             ),
                           ],
                         ),
@@ -240,9 +259,10 @@ class _LoginPageState extends State<LoginPage> {
                             Text(
                               "Don't have an account?",
                               style: TextStyle(
-                                  color: AppColors.dark,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w700),
+                                color: AppColors.dark,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                              ),
                             ),
                             SizedBox(
                               width: 5,
@@ -250,9 +270,10 @@ class _LoginPageState extends State<LoginPage> {
                             Text(
                               'Sign up',
                               style: TextStyle(
-                                  color: AppColors.primary,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w700),
+                                color: AppColors.primary,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                              ),
                             ),
                           ],
                         ),

@@ -6,18 +6,23 @@ import 'package:flutter_shop/navigations/tabbar.dart';
 import 'package:flutter_shop/repositories/login_repository.dart';
 
 class AuthPage extends StatelessWidget {
-  const AuthPage({super.key});
+  const AuthPage({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-        create: (context) => AuthCubit(LoginRepository())..start(),
-        child: BlocBuilder<AuthCubit, AuthState>(builder: (context, state) {
+      create: (context) => AuthCubit(LoginRepository())..start(),
+      child: BlocBuilder<AuthCubit, AuthState>(
+        builder: (context, state) {
           final user = state.user;
           if (user == null) {
             return const LoginPage();
           }
           return const Tabbar();
-        }));
+        },
+      ),
+    );
   }
 }

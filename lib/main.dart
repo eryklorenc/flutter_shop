@@ -30,5 +30,7 @@ void main() async {
       systemNavigationBarIconBrightness: Brightness.dark,
     ),
   );
-  runApp(const MyApp());
+  runApp(
+    const MyApp(),
+  );
 }

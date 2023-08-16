@@ -23,7 +23,10 @@ class WelcomeButton extends StatelessWidget {
         children: [
           Text(
             "Get Started",
-            style: GoogleFonts.teko(color: AppColors.dark, fontSize: 32),
+            style: GoogleFonts.teko(
+              color: AppColors.dark,
+              fontSize: 32,
+            ),
           ),
         ],
       ),
