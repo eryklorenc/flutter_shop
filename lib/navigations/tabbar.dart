@@ -26,7 +26,9 @@ class _TabbarState extends State<Tabbar> {
         if (currentIndex == 1) {
           return Scaffold(
             body: Center(
-              child: Text(S.of(context).koszyk),
+              child: Text(
+                S.of(context).koszyk,
+              ),
             ),
           );
         }
@@ -37,7 +39,9 @@ class _TabbarState extends State<Tabbar> {
                 onPressed: () {
                   context.read<AuthCubit>().signOut();
                 },
-                child: Text(S.of(context).wyloguj_sie),
+                child: Text(
+                  S.of(context).wyloguj_sie,
+                ),
               ),
             ),
           );
@@ -55,15 +59,21 @@ class _TabbarState extends State<Tabbar> {
         },
         items: [
           BottomNavigationBarItem(
-            icon: const Icon(Icons.home_filled),
+            icon: const Icon(
+              Icons.home_filled,
+            ),
             label: S.of(context).strona_glowna,
           ),
           BottomNavigationBarItem(
-            icon: const Icon(Icons.shopping_cart_outlined),
+            icon: const Icon(
+              Icons.shopping_cart_outlined,
+            ),
             label: S.of(context).koszyk,
           ),
           BottomNavigationBarItem(
-            icon: const Icon(Icons.person_outline),
+            icon: const Icon(
+              Icons.person_outline,
+            ),
             label: S.of(context).profil,
           ),
         ],

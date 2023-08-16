@@ -13,5 +13,5 @@ abstract class AppColors {
 
   static const white = Color(0xFFFFFFFF);
 
-  static const white2 = Color(0xFFf9f9f9);
+  static const white2 = Color.fromARGB(255, 250, 246, 246);
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/features/home/widgets/best_selling_content.dart';
+import 'package:flutter_shop/features/home/widgets/custom_app_bar.dart';
 import 'package:flutter_shop/features/home/widgets/men_button_content.dart';
 import 'package:flutter_shop/features/home/widgets/women_button_content.dart';
 
@@ -20,22 +21,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.white2,
-      appBar: AppBar(
-        backgroundColor: AppColors.white,
-        elevation: 0.0,
-        title: const Text(
-          'Flutter Shop',
-          style: TextStyle(
-            color: AppColors.dark,
-          ),
-        ),
-        centerTitle: true,
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.menu),
-          color: AppColors.dark,
-        ),
-      ),
+      appBar: const CustomAppBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -116,7 +102,9 @@ class _HomePageState extends State<HomePage> {
                               child: const Text(
                                 'Women',
                                 style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.bold),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                           ),
@@ -151,9 +139,6 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(
               height: 15,
             ),
-            const Divider(
-              thickness: 2,
-            ),
             const Padding(
               padding: defaultPadding,
               child: Align(
@@ -171,6 +156,7 @@ class _HomePageState extends State<HomePage> {
             const Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: 16,
+                vertical: 10,
               ),
               child: BestSellingContent(),
             ),

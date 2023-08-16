@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop/app/core/theme/app_colors.dart';
 
 class RecommendedCard extends StatelessWidget {
   final AssetImage image;
@@ -13,32 +14,44 @@ class RecommendedCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 120,
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: AppColors.white,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(50),
+            borderRadius: BorderRadius.circular(20),
             child: Image(
               image: image,
               width: 100,
-              height: 140,
+              height: 100,
             ),
           ),
-          const SizedBox(
-            height: 5,
+          Padding(
+            padding: const EdgeInsets.only(
+              left: 8,
+              top: 10,
+            ),
+            child: Text(
+              name,
+              style: Theme.of(context).textTheme.titleSmall,
+              softWrap: true,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 2,
+            ),
           ),
-          Text(
-            name,
-            style: Theme.of(context).textTheme.titleSmall,
-            softWrap: true,
-            overflow: TextOverflow.ellipsis,
-            maxLines: 2,
-          ),
-          Text(
-            price,
-            style: Theme.of(context).textTheme.bodySmall,
+          Padding(
+            padding: const EdgeInsets.only(
+              left: 8,
+              bottom: 8,
+            ),
+            child: Text(
+              price,
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
           ),
         ],
       ),

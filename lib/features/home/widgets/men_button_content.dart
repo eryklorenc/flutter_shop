@@ -23,7 +23,7 @@ class MenButtonContent extends StatelessWidget {
             price: '24€',
           ),
           SizedBox(
-            width: 5,
+            width: 20,
           ),
           RecommendedCard(
             image: AssetImage('assets/clothes2.jpg'),
@@ -31,7 +31,7 @@ class MenButtonContent extends StatelessWidget {
             price: '15€',
           ),
           SizedBox(
-            width: 5,
+            width: 20,
           ),
           RecommendedCard(
             image: AssetImage('assets/clothes3.jpg'),
@@ -39,20 +39,12 @@ class MenButtonContent extends StatelessWidget {
             price: '26€',
           ),
           SizedBox(
-            width: 5,
+            width: 20,
           ),
           RecommendedCard(
             image: AssetImage('assets/clothes4.jpg'),
             name: 'Flame Hoodie',
             price: '10€',
-          ),
-          SizedBox(
-            width: 5,
-          ),
-          RecommendedCard(
-            image: AssetImage('assets/clothes5.jpg'),
-            name: 'Beige Hoodie',
-            price: '40€',
           ),
         ],
       ),
