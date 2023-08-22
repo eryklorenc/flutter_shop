@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/features/welcome/widgets/components/welcome_button.dart';
+import 'package:flutter_shop/generated/l10n.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -32,7 +33,9 @@ class WelcomePage extends StatelessWidget {
               const SizedBox(height: 460),
               Center(
                 child: Text(
-                  'Discover the latest in athletic footwear and apparel',
+                  S
+                      .of(context)
+                      .discover_the_latest_in_athletic_footwear_and_apparel,
                   style: GoogleFonts.teko(
                     color: AppColors.primary,
                     fontSize: 18,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop/features/home/widgets/recommended_card.dart';
+import 'package:flutter_shop/generated/l10n.dart';
 
 class MenButtonContent extends StatelessWidget {
   const MenButtonContent({
@@ -8,43 +9,43 @@ class MenButtonContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
+    return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      physics: BouncingScrollPhysics(),
-      padding: EdgeInsets.symmetric(
+      physics: const BouncingScrollPhysics(),
+      padding: const EdgeInsets.symmetric(
         horizontal: 20,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           RecommendedCard(
-            image: AssetImage('assets/clothes1.jpg'),
-            name: 'Black Pants',
-            price: '24€',
+            image: const AssetImage('assets/clothes1.jpg'),
+            name: S.of(context).black_pants,
+            price: S.of(context).price7,
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           RecommendedCard(
-            image: AssetImage('assets/clothes2.jpg'),
-            name: 'Black Hoodie',
-            price: '15€',
+            image: const AssetImage('assets/clothes2.jpg'),
+            name: S.of(context).black_hoodie,
+            price: S.of(context).price8,
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           RecommendedCard(
-            image: AssetImage('assets/clothes3.jpg'),
-            name: 'Venom Hoodie',
-            price: '26€',
+            image: const AssetImage('assets/clothes3.jpg'),
+            name: S.of(context).venom_hoodie,
+            price: S.of(context).price9,
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           RecommendedCard(
-            image: AssetImage('assets/clothes4.jpg'),
-            name: 'Flame Hoodie',
-            price: '10€',
+            image: const AssetImage('assets/clothes4.jpg'),
+            name: S.of(context).flame_hoodie,
+            price: S.of(context).price5,
           ),
         ],
       ),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/features/auth/cubit/auth_cubit.dart';
+import 'package:flutter_shop/generated/l10n.dart';
 import 'package:flutter_shop/repositories/login_repository.dart';
 
 class LoginPage extends StatefulWidget {
@@ -54,7 +55,9 @@ class _LoginPageState extends State<LoginPage> {
                         Padding(
                           padding: const EdgeInsets.only(left: 110),
                           child: Text(
-                            isCreatingAccount == true ? 'Sign Up' : 'Sign In',
+                            isCreatingAccount == true
+                                ? S.of(context).sign_up
+                                : S.of(context).sign_in,
                             style: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w500,
@@ -69,8 +72,8 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     Text(
                       isCreatingAccount == true
-                          ? 'Register Account'
-                          : 'Welcome Back',
+                          ? S.of(context).register_account
+                          : S.of(context).welcome_back,
                       style: const TextStyle(
                         fontSize: 23,
                         fontWeight: FontWeight.w500,
@@ -79,8 +82,8 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     Text(
                       isCreatingAccount == true
-                          ? 'Complete your details'
-                          : 'Sign in with your email and password',
+                          ? S.of(context).complete_your_details
+                          : S.of(context).sign_in_with_your_email_and_password,
                       style: const TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w300,
@@ -110,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
                             Radius.circular(26),
                           ),
                         ),
-                        hintText: 'Email',
+                        hintText: S.of(context).email0,
                         suffixIcon: const Icon(
                           Icons.email_outlined,
                           color: AppColors.dark,
@@ -141,7 +144,7 @@ class _LoginPageState extends State<LoginPage> {
                             Radius.circular(26),
                           ),
                         ),
-                        hintText: 'Password',
+                        hintText: S.of(context).password,
                         suffixIcon: const Icon(
                           Icons.lock_outline,
                           color: AppColors.dark,
@@ -201,7 +204,9 @@ class _LoginPageState extends State<LoginPage> {
                           backgroundColor: AppColors.primary,
                         ),
                         child: Text(
-                          isCreatingAccount == true ? 'Continue' : 'Continue',
+                          isCreatingAccount == true
+                              ? S.of(context).continue0
+                              : S.of(context).continue0,
                           style: const TextStyle(
                             color: AppColors.white,
                             fontSize: 16,
@@ -220,23 +225,23 @@ class _LoginPageState extends State<LoginPage> {
                             isCreatingAccount = false;
                           });
                         },
-                        child: const Row(
+                        child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              'Already have an account?',
-                              style: TextStyle(
+                              S.of(context).already_have_an_account,
+                              style: const TextStyle(
                                 color: AppColors.dark,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 5,
                             ),
                             Text(
-                              'Sign in',
-                              style: TextStyle(
+                              S.of(context).sign_in,
+                              style: const TextStyle(
                                 color: AppColors.primary,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w700,
@@ -253,23 +258,23 @@ class _LoginPageState extends State<LoginPage> {
                             isCreatingAccount = true;
                           });
                         },
-                        child: const Row(
+                        child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "Don't have an account?",
-                              style: TextStyle(
+                              S.of(context).dont_have_an_account,
+                              style: const TextStyle(
                                 color: AppColors.dark,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 5,
                             ),
                             Text(
-                              'Sign up',
-                              style: TextStyle(
+                              S.of(context).sign_up,
+                              style: const TextStyle(
                                 color: AppColors.primary,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w700,

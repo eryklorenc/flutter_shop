@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
+import 'package:flutter_shop/generated/l10n.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
@@ -14,9 +15,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: AppColors.white,
       elevation: 0,
-      title: const Text(
-        'Flutter Shop',
-        style: TextStyle(
+      title: Text(
+        S.of(context).flutter_shop,
+        style: const TextStyle(
           color: AppColors.dark,
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop/features/home/widgets/recommended_card.dart';
+import 'package:flutter_shop/generated/l10n.dart';
 
 class WomenButtonContent extends StatelessWidget {
   const WomenButtonContent({
@@ -8,51 +9,51 @@ class WomenButtonContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
+    return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      physics: BouncingScrollPhysics(),
-      padding: EdgeInsets.symmetric(
+      physics: const BouncingScrollPhysics(),
+      padding: const EdgeInsets.symmetric(
         horizontal: 20,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           RecommendedCard(
-            image: AssetImage('assets/clothesW3.jpg'),
-            name: 'Black Pants',
-            price: '20€',
+            image: const AssetImage('assets/clothesW3.jpg'),
+            name: S.of(context).black_pants,
+            price: S.of(context).price2,
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           RecommendedCard(
-            image: AssetImage('assets/clothesW1.jpg'),
-            name: 'Colorful Hoodie',
-            price: '35€',
+            image: const AssetImage('assets/clothesW1.jpg'),
+            name: S.of(context).colorful_hoodie,
+            price: S.of(context).price3,
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           RecommendedCard(
-            image: AssetImage('assets/clothesW2.jpg'),
-            name: 'Black Hoodie',
-            price: '28€',
+            image: const AssetImage('assets/clothesW2.jpg'),
+            name: S.of(context).black_hoodie,
+            price: S.of(context).price4,
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           RecommendedCard(
-            image: AssetImage('assets/clothesW3.jpg'),
-            name: 'Black T-shirt',
-            price: '10€',
+            image: const AssetImage('assets/clothesW3.jpg'),
+            name: S.of(context).black_t_shirt,
+            price: S.of(context).price5,
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           RecommendedCard(
-            image: AssetImage('assets/clothesW1.jpg'),
-            name: 'Hoodie',
-            price: '30€',
+            image: const AssetImage('assets/clothesW1.jpg'),
+            name: S.of(context).hoodie,
+            price: S.of(context).price6,
           ),
         ],
       ),

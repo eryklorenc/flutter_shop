@@ -6,6 +6,7 @@ import 'package:flutter_shop/features/home/widgets/best_selling_content.dart';
 import 'package:flutter_shop/features/home/widgets/custom_app_bar.dart';
 import 'package:flutter_shop/features/home/widgets/men_button_content.dart';
 import 'package:flutter_shop/features/home/widgets/women_button_content.dart';
+import 'package:flutter_shop/generated/l10n.dart';
 
 class Home extends StatelessWidget {
   const Home({
@@ -33,9 +34,9 @@ class Home extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text(
-                              'Choose \na category',
-                              style: TextStyle(
+                            Text(
+                              S.of(context).choose_a_category,
+                              style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20,
                                 color: AppColors.dark,
@@ -58,9 +59,9 @@ class Home extends StatelessWidget {
                                           .read<HomeCubit>()
                                           .selectMenButton();
                                     },
-                                    child: const Text(
-                                      'Men',
-                                      style: TextStyle(
+                                    child: Text(
+                                      S.of(context).men,
+                                      style: const TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -85,9 +86,9 @@ class Home extends StatelessWidget {
                                           .read<HomeCubit>()
                                           .selectWomenButton();
                                     },
-                                    child: const Text(
-                                      'Women',
-                                      style: TextStyle(
+                                    child: Text(
+                                      S.of(context).women,
+                                      style: const TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -106,11 +107,11 @@ class Home extends StatelessWidget {
                     children: [
                       Padding(
                         padding: defaultPadding,
-                        child: const Align(
+                        child: Align(
                           alignment: Alignment.topLeft,
                           child: Text(
-                            'Recommended for you',
-                            style: TextStyle(
+                            S.of(context).recommended_for_you,
+                            style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
                               color: AppColors.dark,
@@ -127,11 +128,11 @@ class Home extends StatelessWidget {
                   ),
                   Padding(
                     padding: defaultPadding,
-                    child: const Align(
+                    child: Align(
                       alignment: Alignment.topLeft,
                       child: Text(
-                        'Best Selling',
-                        style: TextStyle(
+                        S.of(context).best_selling,
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                           color: AppColors.dark,

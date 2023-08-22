@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/features/home/widgets/best_product.dart';
+import 'package:flutter_shop/generated/l10n.dart';
 
 class BestSellingContent extends StatelessWidget {
   const BestSellingContent({
@@ -11,17 +12,17 @@ class BestSellingContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const BestProduct(
-          product: 'Orange Hoodie',
-          price: "50€",
-          image: AssetImage('assets/start1.jpg'),
+        BestProduct(
+          product: S.of(context).orange_hoodie,
+          price: S.of(context).price1,
+          image: const AssetImage('assets/start1.jpg'),
         ),
-        const Padding(
-          padding: EdgeInsets.only(left: 15),
+        Padding(
+          padding: const EdgeInsets.only(left: 15),
           child: BestProduct(
-            product: 'Red Handbag',
-            price: '5€',
-            image: AssetImage('assets/start.jpg'),
+            product: S.of(context).red_handbag,
+            price: S.of(context).price2,
+            image: const AssetImage('assets/start.jpg'),
           ),
         ),
         Padding(
@@ -30,7 +31,7 @@ class BestSellingContent extends StatelessWidget {
             right: 5,
           ),
           child: Text(
-            'See More',
+            S.of(context).see_more,
             style: Theme.of(context).textTheme.titleMedium?.copyWith(
                   color: AppColors.dark,
                 ),
