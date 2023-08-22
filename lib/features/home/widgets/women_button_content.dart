@@ -7,6 +7,7 @@ class WomenButtonContent extends StatelessWidget {
     super.key,
   });
 
+  final Widget space = const SizedBox(width: 20);
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -23,33 +24,25 @@ class WomenButtonContent extends StatelessWidget {
             name: S.of(context).black_pants,
             price: S.of(context).price2,
           ),
-          const SizedBox(
-            width: 20,
-          ),
+          space,
           RecommendedCard(
             image: const AssetImage('assets/clothesW1.jpg'),
             name: S.of(context).colorful_hoodie,
             price: S.of(context).price3,
           ),
-          const SizedBox(
-            width: 20,
-          ),
+          space,
           RecommendedCard(
             image: const AssetImage('assets/clothesW2.jpg'),
             name: S.of(context).black_hoodie,
             price: S.of(context).price4,
           ),
-          const SizedBox(
-            width: 20,
-          ),
+          space,
           RecommendedCard(
             image: const AssetImage('assets/clothesW3.jpg'),
             name: S.of(context).black_t_shirt,
             price: S.of(context).price5,
           ),
-          const SizedBox(
-            width: 20,
-          ),
+          space,
           RecommendedCard(
             image: const AssetImage('assets/clothesW1.jpg'),
             name: S.of(context).hoodie,

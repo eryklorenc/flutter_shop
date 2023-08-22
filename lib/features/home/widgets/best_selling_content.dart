@@ -26,21 +26,29 @@ class BestSellingContent extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(
-            left: 20,
-            right: 5,
+          padding: const EdgeInsets.only(left: 20),
+          child: Container(
+            decoration: const BoxDecoration(
+              color: AppColors.primary,
+              borderRadius: BorderRadius.all(
+                Radius.circular(10),
+              ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text(
+                    S.of(context).see_more,
+                    style: const TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
-          child: Text(
-            S.of(context).see_more,
-            style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                  color: AppColors.dark,
-                ),
-          ),
-        ),
-        const Icon(
-          Icons.arrow_forward_ios_outlined,
-          size: 10,
-          color: AppColors.dark,
         ),
       ],
     );
