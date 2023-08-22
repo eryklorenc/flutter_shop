@@ -7,7 +7,9 @@ part 'home_cubit.freezed.dart';
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit()
       : super(
-          const HomeState(),
+          const HomeState(
+            womenButtonSelected: true,
+          ),
         );
 
   void selectMenButton() {

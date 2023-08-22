@@ -28,7 +28,7 @@ class ProductPage extends StatelessWidget {
             child: Container(
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: AppColors.white,
+                color: AppColors.dark,
               ),
               child: IconButton(
                 onPressed: () {
@@ -38,7 +38,7 @@ class ProductPage extends StatelessWidget {
                   Icons.arrow_back,
                   size: 30,
                 ),
-                color: AppColors.dark,
+                color: AppColors.white,
               ),
             ),
           ),

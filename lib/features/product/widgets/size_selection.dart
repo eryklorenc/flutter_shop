@@ -21,15 +21,16 @@ class SizeSelection extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
+          color: isSizeSelected ? AppColors.dark : Colors.transparent,
           border: Border.all(
-            color: isSizeSelected ? AppColors.dark : AppColors.grey2,
+            color: isSizeSelected ? AppColors.dark : AppColors.greyLight,
           ),
           borderRadius: BorderRadius.circular(8),
         ),
         child: Text(
           size,
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                color: isSizeSelected ? AppColors.dark : AppColors.grey2,
+                color: isSizeSelected ? AppColors.white : AppColors.grey,
               ),
         ),
       ),
