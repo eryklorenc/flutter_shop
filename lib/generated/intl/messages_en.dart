@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "about_us": MessageLookupByLibrary.simpleMessage("About us"),
         "already_have_an_account":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "best_selling": MessageLookupByLibrary.simpleMessage("Best Selling"),
@@ -36,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Colorful Hoodie"),
         "complete_your_details":
             MessageLookupByLibrary.simpleMessage("Complete your details"),
+        "contact_us": MessageLookupByLibrary.simpleMessage("Contact us"),
         "content": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
         "continue0": MessageLookupByLibrary.simpleMessage("Continue"),
@@ -49,6 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "flame_hoodie": MessageLookupByLibrary.simpleMessage("Flame Hoodie"),
         "flutter_shop": MessageLookupByLibrary.simpleMessage("Flutter Shop"),
         "get_started": MessageLookupByLibrary.simpleMessage("Get Started"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
         "home_page": MessageLookupByLibrary.simpleMessage("Home Page"),
         "hoodie": MessageLookupByLibrary.simpleMessage("Hoodie"),
         "l": MessageLookupByLibrary.simpleMessage("L"),
