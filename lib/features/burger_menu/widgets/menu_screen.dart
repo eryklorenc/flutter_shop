@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
-import 'package:flutter_shop/features/about_us/about_us.dart';
 import 'package:flutter_shop/features/auth/cubit/auth_cubit.dart';
 import 'package:flutter_shop/features/contact_us/contact_us.dart';
 import 'package:flutter_shop/features/home/home.dart';
@@ -102,26 +101,6 @@ class MenuScreen extends StatelessWidget {
                 ),
               ),
             ),
-            ListTile(
-              leading: const Icon(
-                Icons.info,
-                size: 30,
-                color: AppColors.dark,
-              ),
-              title: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (_) => const AboutUs(),
-                    ),
-                  );
-                },
-                child: Text(
-                  S.of(context).about_us,
-                  style: Theme.of(context).textTheme.titleSmall,
-                ),
-              ),
-            ),
             const Divider(
               color: AppColors.white,
               thickness: 1,
@@ -169,7 +148,7 @@ class MenuScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 50,
+              height: 130,
             ),
             const Divider(
               color: AppColors.white,
