@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
+import 'package:flutter_shop/features/about_us/about_us.dart';
 import 'package:flutter_shop/features/auth/cubit/auth_cubit.dart';
 import 'package:flutter_shop/features/contact_us/contact_us.dart';
 import 'package:flutter_shop/features/home/home.dart';
@@ -108,7 +109,13 @@ class MenuScreen extends StatelessWidget {
                 color: AppColors.dark,
               ),
               title: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const AboutUs(),
+                    ),
+                  );
+                },
                 child: Text(
                   S.of(context).about_us,
                   style: Theme.of(context).textTheme.titleSmall,
