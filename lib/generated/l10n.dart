@@ -599,6 +599,26 @@ class S {
       args: [],
     );
   }
+
+  /// `eryklorenc11@gmail.com`
+  String get me {
+    return Intl.message(
+      'eryklorenc11@gmail.com',
+      name: 'me',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `https://github.com/eryklorenc`
+  String get github {
+    return Intl.message(
+      'https://github.com/eryklorenc',
+      name: 'github',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

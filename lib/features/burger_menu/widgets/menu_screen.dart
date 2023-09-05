@@ -2,10 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/features/auth/cubit/auth_cubit.dart';
+import 'package:flutter_shop/features/contact_us/contact_us.dart';
+import 'package:flutter_shop/features/home/home.dart';
 import 'package:flutter_shop/generated/l10n.dart';
 
 class MenuScreen extends StatelessWidget {
-  const MenuScreen({Key? key}) : super(key: key);
+  const MenuScreen({
+    Key? key,
+  }) : super(
+          key: key,
+        );
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +88,13 @@ class MenuScreen extends StatelessWidget {
                 color: AppColors.dark,
               ),
               title: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const Home(),
+                    ),
+                  );
+                },
                 child: Text(
                   S.of(context).home,
                   style: Theme.of(context).textTheme.titleSmall,
@@ -116,7 +128,13 @@ class MenuScreen extends StatelessWidget {
                 color: AppColors.dark,
               ),
               title: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const ContactUs(),
+                    ),
+                  );
+                },
                 child: Text(
                   S.of(context).contact_us,
                   style: Theme.of(context).textTheme.titleSmall,
