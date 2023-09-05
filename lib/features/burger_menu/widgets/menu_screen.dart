@@ -101,20 +101,6 @@ class MenuScreen extends StatelessWidget {
                 ),
               ),
             ),
-            ListTile(
-              leading: const Icon(
-                Icons.info,
-                size: 30,
-                color: AppColors.dark,
-              ),
-              title: GestureDetector(
-                onTap: () {},
-                child: Text(
-                  S.of(context).about_us,
-                  style: Theme.of(context).textTheme.titleSmall,
-                ),
-              ),
-            ),
             const Divider(
               color: AppColors.white,
               thickness: 1,
@@ -162,7 +148,7 @@ class MenuScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 50,
+              height: 130,
             ),
             const Divider(
               color: AppColors.white,

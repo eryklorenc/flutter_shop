@@ -590,16 +590,6 @@ class S {
     );
   }
 
-  /// `About us`
-  String get about_us {
-    return Intl.message(
-      'About us',
-      name: 'about_us',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `eryklorenc11@gmail.com`
   String get me {
     return Intl.message(
