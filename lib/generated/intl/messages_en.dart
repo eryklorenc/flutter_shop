@@ -30,16 +30,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "black_t_shirt": MessageLookupByLibrary.simpleMessage("Black T-shirt"),
         "buy_now": MessageLookupByLibrary.simpleMessage("Buy Now"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
+        "change_e_mail": MessageLookupByLibrary.simpleMessage("Change e-mail"),
+        "change_password":
+            MessageLookupByLibrary.simpleMessage("Change password"),
         "choose_a_category":
             MessageLookupByLibrary.simpleMessage("Choose \na category"),
         "colorful_hoodie":
             MessageLookupByLibrary.simpleMessage("Colorful Hoodie"),
         "complete_your_details":
             MessageLookupByLibrary.simpleMessage("Complete your details"),
+        "confirm_new_password":
+            MessageLookupByLibrary.simpleMessage("Confirm New Password"),
         "contact_us": MessageLookupByLibrary.simpleMessage("Contact us"),
         "content": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
         "continue0": MessageLookupByLibrary.simpleMessage("Continue"),
+        "current_password":
+            MessageLookupByLibrary.simpleMessage("Current Password"),
         "discover_the_latest_in_athletic_footwear_and_apparel":
             MessageLookupByLibrary.simpleMessage(
                 "Discover the latest in athletic footwear and apparel"),
@@ -61,6 +68,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "m": MessageLookupByLibrary.simpleMessage("M"),
         "me": MessageLookupByLibrary.simpleMessage("eryklorenc11@gmail.com"),
         "men": MessageLookupByLibrary.simpleMessage("Men"),
+        "new_e_mail": MessageLookupByLibrary.simpleMessage("New e-mail"),
+        "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
         "orange_hoodie": MessageLookupByLibrary.simpleMessage("Orange Hoodie"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "price": MessageLookupByLibrary.simpleMessage("€130.99"),
@@ -85,6 +94,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "register_account":
             MessageLookupByLibrary.simpleMessage("Register Account"),
         "s": MessageLookupByLibrary.simpleMessage("S"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "see_more": MessageLookupByLibrary.simpleMessage("See More"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign In"),

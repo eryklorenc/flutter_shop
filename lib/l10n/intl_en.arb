@@ -59,5 +59,12 @@
     "edit_profile": "Edit profile",
     "privacy_security": "Privacy & Security",
     "privacy_policy": "Privacy Policy",
-    "terms_and_conditions": "Terms and Conditions"
+    "terms_and_conditions": "Terms and Conditions",
+    "change_password": "Change password",
+    "current_password": "Current Password",
+    "new_password": "New Password",
+    "confirm_new_password": "Confirm New Password",
+    "change_e_mail": "Change e-mail",
+    "new_e_mail": "New e-mail",
+    "save": "Save"
 }
