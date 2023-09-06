@@ -80,7 +80,10 @@ class AuthCubit extends Cubit<AuthState> {
     required String password,
   }) async {
     try {
-      await _loginRepository.changeEmail(newEmail, password);
+      await _loginRepository.changeEmail(
+        newEmail,
+        password,
+      );
       emit(
         AuthState(
           user: state.user,
@@ -103,7 +106,10 @@ class AuthCubit extends Cubit<AuthState> {
     required String oldPassword,
   }) async {
     try {
-      await _loginRepository.changePassword(newPassword, oldPassword);
+      await _loginRepository.changePassword(
+        newPassword,
+        oldPassword,
+      );
       emit(
         AuthState(
           user: state.user,

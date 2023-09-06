@@ -42,6 +42,10 @@ class PrivacyAndSecurityPageState extends State<PrivacyAndSecurityPage> {
             body: ListView(
               children: [
                 SecurityContent(
+                  leading: const Icon(
+                    Icons.lock_outline,
+                    color: AppColors.dark,
+                  ),
                   title: S.of(context).change_password,
                   icon: Icon(
                     _showChangePassword
@@ -119,6 +123,10 @@ class PrivacyAndSecurityPageState extends State<PrivacyAndSecurityPage> {
                     ),
                   ),
                 SecurityContent(
+                  leading: const Icon(
+                    Icons.mail_outline,
+                    color: AppColors.dark,
+                  ),
                   onTap: () {
                     setState(
                       () {

@@ -25,21 +25,15 @@ class ProductPage extends StatelessWidget {
           centerTitle: true,
           leading: Padding(
             padding: const EdgeInsets.only(left: 8),
-            child: Container(
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: AppColors.dark,
+            child: IconButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              icon: const Icon(
+                Icons.arrow_back,
+                size: 35,
               ),
-              child: IconButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                icon: const Icon(
-                  Icons.arrow_back,
-                  size: 30,
-                ),
-                color: AppColors.white,
-              ),
+              color: AppColors.dark,
             ),
           ),
         ),

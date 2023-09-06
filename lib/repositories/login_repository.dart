@@ -31,7 +31,10 @@ class LoginRepository {
     return FirebaseAuth.instance.signOut();
   }
 
-  Future<void> changeEmail(String newEmail, String password) async {
+  Future<void> changeEmail(
+    String newEmail,
+    String password,
+  ) async {
     User? user = FirebaseAuth.instance.currentUser;
 
     if (user != null) {
@@ -48,7 +51,10 @@ class LoginRepository {
     }
   }
 
-  Future<void> changePassword(String newPassword, String oldPassword) async {
+  Future<void> changePassword(
+    String newPassword,
+    String oldPassword,
+  ) async {
     User? user = FirebaseAuth.instance.currentUser;
 
     if (user != null) {

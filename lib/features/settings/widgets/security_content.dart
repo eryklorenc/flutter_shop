@@ -5,22 +5,21 @@ class SecurityContent extends StatelessWidget {
   final VoidCallback onTap;
   final Icon icon;
   final String title;
+  final Widget leading;
 
   const SecurityContent({
     Key? key,
     required this.onTap,
     required this.icon,
     required this.title,
+    required this.leading,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       onTap: onTap,
-      leading: const Icon(
-        Icons.lock_outline,
-        color: AppColors.dark,
-      ),
+      leading: leading,
       title: Text(
         title,
         style: const TextStyle(
