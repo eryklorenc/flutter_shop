@@ -45,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Discover the latest in athletic footwear and apparel"),
         "dont_have_an_account":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "edit_profile": MessageLookupByLibrary.simpleMessage("Edit profile"),
         "email": MessageLookupByLibrary.simpleMessage("Email@email.com"),
         "email0": MessageLookupByLibrary.simpleMessage("Email"),
         "flame_hoodie": MessageLookupByLibrary.simpleMessage("Flame Hoodie"),
@@ -73,6 +74,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "price7": MessageLookupByLibrary.simpleMessage("24€"),
         "price8": MessageLookupByLibrary.simpleMessage("15€"),
         "price9": MessageLookupByLibrary.simpleMessage("26€"),
+        "privacy_policy":
+            MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "privacy_security":
+            MessageLookupByLibrary.simpleMessage("Privacy & Security"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "recommended_for_you":
             MessageLookupByLibrary.simpleMessage("Recommended for you"),
@@ -87,6 +92,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Sign in with your email and password"),
         "sign_up": MessageLookupByLibrary.simpleMessage("Sign Up"),
+        "terms_and_conditions":
+            MessageLookupByLibrary.simpleMessage("Terms and Conditions"),
         "venom_hoodie": MessageLookupByLibrary.simpleMessage("Venom Hoodie"),
         "welcome_back": MessageLookupByLibrary.simpleMessage("Welcome Back"),
         "women": MessageLookupByLibrary.simpleMessage("Women"),

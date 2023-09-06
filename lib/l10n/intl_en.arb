@@ -55,5 +55,9 @@
     "home": "Home",
     "contact_us": "Contact us",
     "me": "eryklorenc11@gmail.com",
-    "github": "https://github.com/eryklorenc"
+    "github": "https://github.com/eryklorenc",
+    "edit_profile": "Edit profile",
+    "privacy_security": "Privacy & Security",
+    "privacy_policy": "Privacy Policy",
+    "terms_and_conditions": "Terms and Conditions"
 }

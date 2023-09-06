@@ -609,6 +609,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Edit profile`
+  String get edit_profile {
+    return Intl.message(
+      'Edit profile',
+      name: 'edit_profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Privacy & Security`
+  String get privacy_security {
+    return Intl.message(
+      'Privacy & Security',
+      name: 'privacy_security',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Privacy Policy`
+  String get privacy_policy {
+    return Intl.message(
+      'Privacy Policy',
+      name: 'privacy_policy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Terms and Conditions`
+  String get terms_and_conditions {
+    return Intl.message(
+      'Terms and Conditions',
+      name: 'terms_and_conditions',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
