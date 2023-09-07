@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop/app/core/common/custom_app_bar.dart';
+import 'package:flutter_shop/features/shopping_cart/widgets/cart_content.dart';
 import 'package:flutter_shop/generated/l10n.dart';
 
 class ShoppingCartPage extends StatelessWidget {
@@ -13,8 +14,21 @@ class ShoppingCartPage extends StatelessWidget {
       appBar: CustomAppBar(
         title: S.of(context).shopping_cart,
       ),
-      body: const Center(
-        child: Text('Cart'),
+      body: ListView(
+        children: const [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+            child: CartContent(),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+            child: CartContent(),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+            child: CartContent(),
+          ),
+        ],
       ),
     );
   }
