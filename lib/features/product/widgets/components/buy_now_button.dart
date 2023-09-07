@@ -3,8 +3,11 @@ import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/generated/l10n.dart';
 
 class BuyNowButton extends StatelessWidget {
+  final VoidCallback onPressed;
+
   const BuyNowButton({
     super.key,
+    required this.onPressed,
   });
 
   @override
@@ -12,7 +15,7 @@ class BuyNowButton extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         child: Padding(
           padding: const EdgeInsets.symmetric(
             vertical: 16,

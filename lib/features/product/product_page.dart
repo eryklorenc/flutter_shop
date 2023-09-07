@@ -145,15 +145,17 @@ class ProductPage extends StatelessWidget {
                 ),
               ),
             ),
-            const Positioned(
+            Positioned(
               top: 680,
               left: 0,
               right: 0,
               child: Padding(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 25,
                 ),
-                child: BuyNowButton(),
+                child: BuyNowButton(
+                  onPressed: () {},
+                ),
               ),
             ),
           ],
