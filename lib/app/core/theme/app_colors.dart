@@ -7,6 +7,8 @@ abstract class AppColors {
 
   static const dark = Color.fromARGB(255, 0, 0, 0);
 
+  static const black = Color.fromARGB(255, 36, 34, 34);
+
   static const grey = Color.fromARGB(255, 80, 79, 79);
 
   static const greyLight = Color.fromARGB(255, 185, 182, 182);

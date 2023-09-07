@@ -21,7 +21,7 @@ class BurgerMenu extends StatelessWidget {
       drawerShadowsBackgroundColor: AppColors.white.withOpacity(0.33),
       shadowLayer1Color: Colors.transparent,
       angle: 0.0,
-      menuBackgroundColor: AppColors.primary,
+      menuBackgroundColor: AppColors.black,
       slideWidth: MediaQuery.of(context).size.width * 0.85,
       controller: zoomDrawerController,
       style: DrawerStyle.defaultStyle,
