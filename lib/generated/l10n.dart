@@ -719,6 +719,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Password has been changed`
+  String get password_has_been_changed {
+    return Intl.message(
+      'Password has been changed',
+      name: 'password_has_been_changed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error, password does not match`
+  String get error_password_does_not_match {
+    return Intl.message(
+      'Error, password does not match',
+      name: 'error_password_does_not_match',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email has been changed`
+  String get email_has_been_changed {
+    return Intl.message(
+      'Email has been changed',
+      name: 'email_has_been_changed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An error occurred while changing the email address`
+  String get an_error_occurred_while_changing_the_email_address {
+    return Intl.message(
+      'An error occurred while changing the email address',
+      name: 'an_error_occurred_while_changing_the_email_address',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -24,6 +24,9 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "already_have_an_account":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "an_error_occurred_while_changing_the_email_address":
+            MessageLookupByLibrary.simpleMessage(
+                "An error occurred while changing the email address"),
         "best_selling": MessageLookupByLibrary.simpleMessage("Best Selling"),
         "black_hoodie": MessageLookupByLibrary.simpleMessage("Black Hoodie"),
         "black_pants": MessageLookupByLibrary.simpleMessage("Black Pants"),
@@ -55,6 +58,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "edit_profile": MessageLookupByLibrary.simpleMessage("Edit profile"),
         "email": MessageLookupByLibrary.simpleMessage("Email@email.com"),
         "email0": MessageLookupByLibrary.simpleMessage("Email"),
+        "email_has_been_changed":
+            MessageLookupByLibrary.simpleMessage("Email has been changed"),
+        "error_password_does_not_match": MessageLookupByLibrary.simpleMessage(
+            "Error, password does not match"),
         "flame_hoodie": MessageLookupByLibrary.simpleMessage("Flame Hoodie"),
         "flutter_shop": MessageLookupByLibrary.simpleMessage("Flutter Shop"),
         "get_started": MessageLookupByLibrary.simpleMessage("Get Started"),
@@ -72,6 +79,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "new_password": MessageLookupByLibrary.simpleMessage("New Password"),
         "orange_hoodie": MessageLookupByLibrary.simpleMessage("Orange Hoodie"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "password_has_been_changed":
+            MessageLookupByLibrary.simpleMessage("Password has been changed"),
         "price": MessageLookupByLibrary.simpleMessage("€130.99"),
         "price0": MessageLookupByLibrary.simpleMessage("20€"),
         "price1": MessageLookupByLibrary.simpleMessage("50€"),

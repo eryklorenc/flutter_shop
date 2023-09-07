@@ -2,10 +2,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
+import 'package:flutter_shop/app/core/utils/injection_container.dart';
 import 'package:flutter_shop/features/auth/cubit/auth_cubit.dart';
 import 'package:flutter_shop/features/auth/widgets/auth_text_field.dart';
+import 'package:flutter_shop/features/auth/widgets/components/auth_button.dart';
+import 'package:flutter_shop/features/auth/widgets/components/login_button.dart';
 import 'package:flutter_shop/generated/l10n.dart';
-import 'package:flutter_shop/repositories/login_repository.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({
@@ -26,9 +28,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AuthCubit(
-        LoginRepository(),
-      ),
+      create: (context) => getIt<AuthCubit>(),
       child: BlocBuilder<AuthCubit, AuthState>(
         builder: (context, state) {
           return Scaffold(
@@ -100,6 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                         color: AppColors.dark,
                       ),
                       obscureText: false,
+                      hintText: S.of(context).email0,
                     ),
                     const SizedBox(
                       height: 30,
@@ -111,6 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                         color: AppColors.dark,
                       ),
                       obscureText: true,
+                      hintText: S.of(context).password,
                     ),
                     Text(errorMessage),
                     const SizedBox(
@@ -119,7 +121,8 @@ class _LoginPageState extends State<LoginPage> {
                     SizedBox(
                       height: 50,
                       width: 250,
-                      child: ElevatedButton(
+                      child: LoginButton(
+                        isCreatingAccount: isCreatingAccount,
                         onPressed: () async {
                           if (isCreatingAccount == true) {
                             try {
@@ -157,91 +160,31 @@ class _LoginPageState extends State<LoginPage> {
                             });
                           }
                         },
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(31),
-                          ),
-                          backgroundColor: AppColors.primary,
-                        ),
-                        child: Text(
-                          isCreatingAccount == true
-                              ? S.of(context).continue0
-                              : S.of(context).continue0,
-                          style: const TextStyle(
-                            color: AppColors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
                       ),
                     ),
                     const SizedBox(
                       height: 15,
                     ),
                     if (isCreatingAccount == true) ...[
-                      TextButton(
+                      AuthButton(
                         onPressed: () {
                           setState(() {
                             isCreatingAccount = false;
                           });
                         },
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              S.of(context).already_have_an_account,
-                              style: const TextStyle(
-                                color: AppColors.dark,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 5,
-                            ),
-                            Text(
-                              S.of(context).sign_in,
-                              style: const TextStyle(
-                                color: AppColors.primary,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                          ],
-                        ),
+                        accountInfo: S.of(context).already_have_an_account,
+                        sign: S.of(context).sign_in,
                       ),
                     ],
                     if (isCreatingAccount == false) ...[
-                      TextButton(
+                      AuthButton(
                         onPressed: () {
                           setState(() {
                             isCreatingAccount = true;
                           });
                         },
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              S.of(context).dont_have_an_account,
-                              style: const TextStyle(
-                                color: AppColors.dark,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 5,
-                            ),
-                            Text(
-                              S.of(context).sign_up,
-                              style: const TextStyle(
-                                color: AppColors.primary,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                          ],
-                        ),
+                        accountInfo: S.of(context).dont_have_an_account,
+                        sign: S.of(context).sign_up,
                       ),
                     ],
                   ],
