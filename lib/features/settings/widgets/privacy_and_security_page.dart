@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_shop/app/core/config/enums.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/app/core/utils/injection_container.dart';
 import 'package:flutter_shop/features/auth/cubit/auth_cubit.dart';
@@ -111,13 +112,31 @@ class PrivacyAndSecurityPageState extends State<PrivacyAndSecurityPage> {
                             confirmNewPasswordController.text;
 
                         if (newPassword == confirmNewPassword) {
-                          context.read<AuthCubit>().changePassword(
+                          context
+                              .read<AuthCubit>()
+                              .changePassword(
                                 oldPassword: currentPassword,
                                 newPassword: newPassword,
+                              )
+                              .then((status) {
+                            if (state.status == Status.success) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(
+                                      S.of(context).password_has_been_changed),
+                                  backgroundColor: AppColors.dark,
+                                ),
                               );
+                            }
+                          });
                         } else {
-                          // Wyświetl komunikat o błędzie
-                          // newPassword i confirmNewPassword nie są takie same
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                  S.of(context).error_password_does_not_match),
+                              backgroundColor: AppColors.dark,
+                            ),
+                          );
                         }
                       },
                     ),
@@ -172,13 +191,33 @@ class PrivacyAndSecurityPageState extends State<PrivacyAndSecurityPage> {
                   Padding(
                     padding: _padding,
                     child: SaveButton(
-                      onPressed: () {
+                      onPressed: () async {
                         final newEmail = newEmailController.text;
                         final password = passwordController.text;
-                        context.read<AuthCubit>().changeEmail(
-                              newEmail: newEmail,
-                              password: password,
+                        if (newEmail.isNotEmpty && password.isNotEmpty) {
+                          context.read<AuthCubit>().changeEmail(
+                                newEmail: newEmail,
+                                password: password,
+                              );
+                          if (state.status == Status.success) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content:
+                                    Text(S.of(context).email_has_been_changed),
+                                backgroundColor: AppColors.dark,
+                              ),
                             );
+                          } else if (state.status == Status.error) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(S
+                                    .of(context)
+                                    .an_error_occurred_while_changing_the_email_address),
+                                backgroundColor: AppColors.dark,
+                              ),
+                            );
+                          }
+                        }
                       },
                     ),
                   ),

@@ -66,5 +66,9 @@
     "confirm_new_password": "Confirm New Password",
     "change_e_mail": "Change e-mail",
     "new_e_mail": "New e-mail",
-    "save": "Save"
+    "save": "Save",
+    "password_has_been_changed": "Password has been changed",
+    "error_password_does_not_match": "Error, password does not match",
+    "email_has_been_changed": "Email has been changed",
+    "an_error_occurred_while_changing_the_email_address": "An error occurred while changing the email address"
 }

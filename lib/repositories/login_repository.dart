@@ -46,7 +46,7 @@ class LoginRepository {
         await user.reauthenticateWithCredential(credential);
         await user.updateEmail(newEmail);
       } catch (error) {
-        throw error;
+        rethrow;
       }
     }
   }
@@ -66,7 +66,7 @@ class LoginRepository {
         await user.reauthenticateWithCredential(credential);
         await user.updatePassword(newPassword);
       } catch (error) {
-        throw error;
+        rethrow;
       }
     }
   }
