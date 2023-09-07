@@ -4,7 +4,7 @@ import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/features/burger_menu/burger_menu.dart';
 import 'package:flutter_shop/features/home/cubit/home_cubit.dart';
 import 'package:flutter_shop/features/home/widgets/best_selling_content.dart';
-import 'package:flutter_shop/features/home/widgets/custom_app_bar.dart';
+import 'package:flutter_shop/features/home/widgets/home_app_bar.dart';
 import 'package:flutter_shop/features/home/widgets/men_button_content.dart';
 import 'package:flutter_shop/features/home/widgets/women_button_content.dart';
 import 'package:flutter_shop/generated/l10n.dart';
@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
           builder: (context, state) {
             return Scaffold(
               backgroundColor: AppColors.white2,
-              appBar: CustomAppBar(
+              appBar: HomeAppBar(
                 zoomDrawerController: zoomDrawerController,
               ),
               body: SingleChildScrollView(

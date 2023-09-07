@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_shop/app/core/common/custom_app_bar.dart';
 import 'package:flutter_shop/app/core/config/enums.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/app/core/utils/injection_container.dart';
@@ -7,7 +8,6 @@ import 'package:flutter_shop/features/auth/cubit/auth_cubit.dart';
 import 'package:flutter_shop/features/settings/widgets/components/save_button.dart';
 import 'package:flutter_shop/features/settings/widgets/custom_text_field.dart';
 import 'package:flutter_shop/features/settings/widgets/security_content.dart';
-import 'package:flutter_shop/features/settings/widgets/settings_app_bar.dart';
 import 'package:flutter_shop/generated/l10n.dart';
 
 class PrivacyAndSecurityPage extends StatefulWidget {
@@ -37,7 +37,7 @@ class PrivacyAndSecurityPageState extends State<PrivacyAndSecurityPage> {
       child: BlocBuilder<AuthCubit, AuthState>(
         builder: (context, state) {
           return Scaffold(
-            appBar: SettingsAppBar(
+            appBar: CustomAppBar(
               title: S.of(context).privacy_security,
             ),
             body: ListView(

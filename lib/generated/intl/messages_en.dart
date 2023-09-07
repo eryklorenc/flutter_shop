@@ -106,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "see_more": MessageLookupByLibrary.simpleMessage("See More"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
+        "shopping_cart": MessageLookupByLibrary.simpleMessage("Shopping Cart"),
         "sign_in": MessageLookupByLibrary.simpleMessage("Sign In"),
         "sign_in_with_your_email_and_password":
             MessageLookupByLibrary.simpleMessage(

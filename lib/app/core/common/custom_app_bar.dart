@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
 
-class SettingsAppBar extends StatelessWidget implements PreferredSizeWidget {
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
-  const SettingsAppBar({
+
+  const CustomAppBar({
     super.key,
     required this.title,
   });

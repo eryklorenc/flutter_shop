@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop/app/core/common/custom_app_bar.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/features/settings/widgets/privacy_and_security_page.dart';
 import 'package:flutter_shop/features/settings/widgets/setting_option.dart';
-import 'package:flutter_shop/features/settings/widgets/settings_app_bar.dart';
 import 'package:flutter_shop/generated/l10n.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -22,7 +22,7 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.white,
-      appBar: SettingsAppBar(
+      appBar: CustomAppBar(
         title: S.of(context).settings,
       ),
       body: Column(
