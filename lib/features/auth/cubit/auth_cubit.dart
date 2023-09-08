@@ -3,7 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_shop/app/core/config/enums.dart';
 import 'package:flutter_shop/repositories/login_repository.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
+
+part 'auth_cubit.freezed.dart';
 
 part 'auth_state.dart';
 
