@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_shop/app/core/common/custom_app_bar.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
@@ -5,12 +6,15 @@ import 'package:flutter_shop/app/core/theme/app_text_theme_extension.dart';
 import 'package:flutter_shop/generated/l10n.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({
+  ProfilePage({
     super.key,
   });
 
+  final User? user = FirebaseAuth.instance.currentUser;
+
   @override
   Widget build(BuildContext context) {
+    final String? email = user?.email;
     return Scaffold(
       appBar: CustomAppBar(
         title: S.of(context).profile,
@@ -41,7 +45,7 @@ class ProfilePage extends StatelessWidget {
                     child: TextField(
                       readOnly: true,
                       decoration: InputDecoration(
-                        hintText: S.of(context).email_address,
+                        hintText: email,
                         filled: true,
                         fillColor: AppColors.white,
                         border: OutlineInputBorder(

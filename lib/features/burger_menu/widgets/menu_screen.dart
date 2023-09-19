@@ -86,7 +86,7 @@ class MenuScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (_) => const ProfilePage(),
+                      builder: (_) => ProfilePage(),
                     ),
                   );
                 },
