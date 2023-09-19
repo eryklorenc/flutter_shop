@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
+import 'package:flutter_shop/app/core/theme/app_text_theme_extension.dart';
 
 class SettingOption extends StatelessWidget {
   final Icon icon;
@@ -20,10 +21,7 @@ class SettingOption extends StatelessWidget {
         padding: const EdgeInsets.only(left: 10),
         child: Text(
           title,
-          style: const TextStyle(
-            color: AppColors.dark,
-            fontWeight: FontWeight.w500,
-          ),
+          style: Theme.of(context).xTextTheme.h3,
         ),
       ),
       trailing: IconButton(

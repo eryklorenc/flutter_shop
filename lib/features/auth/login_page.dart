@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
+import 'package:flutter_shop/app/core/theme/app_text_theme_extension.dart';
 import 'package:flutter_shop/app/core/utils/injection_container.dart';
 import 'package:flutter_shop/features/auth/cubit/auth_cubit.dart';
 import 'package:flutter_shop/features/auth/widgets/auth_text_field.dart';
@@ -59,11 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                             isCreatingAccount == true
                                 ? S.of(context).sign_up
                                 : S.of(context).sign_in,
-                            style: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                              color: AppColors.grey,
-                            ),
+                            style: Theme.of(context).xTextTheme.display0,
                           ),
                         ),
                       ],
@@ -75,20 +72,14 @@ class _LoginPageState extends State<LoginPage> {
                       isCreatingAccount == true
                           ? S.of(context).register_account
                           : S.of(context).welcome_back,
-                      style: const TextStyle(
-                        fontSize: 23,
-                        fontWeight: FontWeight.w500,
-                      ),
+                      style: Theme.of(context).xTextTheme.display1,
                       textAlign: TextAlign.center,
                     ),
                     Text(
                       isCreatingAccount == true
                           ? S.of(context).complete_your_details
                           : S.of(context).sign_in_with_your_email_and_password,
-                      style: const TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w300,
-                      ),
+                      style: Theme.of(context).xTextTheme.body1,
                     ),
                     const SizedBox(
                       height: 50,

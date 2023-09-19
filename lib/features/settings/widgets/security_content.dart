@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shop/app/core/theme/app_colors.dart';
+import 'package:flutter_shop/app/core/theme/app_text_theme_extension.dart';
 
 class SecurityContent extends StatelessWidget {
   final VoidCallback onTap;
@@ -22,11 +22,7 @@ class SecurityContent extends StatelessWidget {
       leading: leading,
       title: Text(
         title,
-        style: const TextStyle(
-          fontSize: 16,
-          color: AppColors.dark,
-          fontWeight: FontWeight.w500,
-        ),
+        style: Theme.of(context).xTextTheme.h2,
       ),
       trailing: icon,
     );

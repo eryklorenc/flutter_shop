@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
+import 'package:flutter_shop/app/core/theme/app_text_theme_extension.dart';
 import 'package:flutter_shop/features/product/cubit/product_cubit.dart';
 import 'package:flutter_shop/features/product/widgets/components/buy_now_button.dart';
 import 'package:flutter_shop/features/product/widgets/size_selection.dart';
@@ -78,21 +79,13 @@ class ProductPage extends StatelessWidget {
                     children: [
                       Text(
                         name,
-                        style: const TextStyle(
-                          color: AppColors.dark,
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: Theme.of(context).xTextTheme.body6,
                       ),
                       Padding(
                         padding: const EdgeInsets.only(right: 35),
                         child: Text(
                           price,
-                          style: const TextStyle(
-                            color: AppColors.dark,
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: Theme.of(context).xTextTheme.body6,
                         ),
                       ),
                     ],
@@ -111,11 +104,7 @@ class ProductPage extends StatelessWidget {
                 ),
                 child: Text(
                   S.of(context).content,
-                  style: const TextStyle(
-                    color: AppColors.grey,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                  ),
+                  style: Theme.of(context).xTextTheme.body7,
                 ),
               ),
             ),
