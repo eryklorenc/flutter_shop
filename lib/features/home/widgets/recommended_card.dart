@@ -6,6 +6,7 @@ class RecommendedCard extends StatelessWidget {
   final AssetImage image;
   final String price;
   final String name;
+
   const RecommendedCard({
     super.key,
     required this.image,
@@ -19,7 +20,11 @@ class RecommendedCard extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (_) => const ProductPage(),
+            builder: (_) => ProductPage(
+              image: image,
+              price: price,
+              name: name,
+            ),
           ),
         );
       },

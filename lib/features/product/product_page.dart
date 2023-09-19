@@ -7,8 +7,15 @@ import 'package:flutter_shop/features/product/widgets/size_selection.dart';
 import 'package:flutter_shop/generated/l10n.dart';
 
 class ProductPage extends StatelessWidget {
+  final AssetImage image;
+  final String price;
+  final String name;
+
   const ProductPage({
     super.key,
+    required this.image,
+    required this.price,
+    required this.name,
   });
 
   final EdgeInsetsGeometry customPadding = const EdgeInsets.only(right: 10);
@@ -44,8 +51,8 @@ class ProductPage extends StatelessWidget {
               left: 0,
               right: 0,
               bottom: 420,
-              child: Image.asset(
-                'assets/start.jpg',
+              child: Image(
+                image: image,
                 fit: BoxFit.cover,
               ),
             ),
@@ -70,7 +77,7 @@ class ProductPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        S.of(context).hoodie,
+                        name,
                         style: const TextStyle(
                           color: AppColors.dark,
                           fontSize: 25,
@@ -80,7 +87,7 @@ class ProductPage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(right: 35),
                         child: Text(
-                          S.of(context).price,
+                          price,
                           style: const TextStyle(
                             color: AppColors.dark,
                             fontSize: 25,

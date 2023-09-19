@@ -20,7 +20,11 @@ class BestProduct extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (_) => const ProductPage(),
+            builder: (_) => ProductPage(
+              image: image,
+              price: price,
+              name: product,
+            ),
           ),
         );
       },
