@@ -71,5 +71,7 @@
     "error_password_does_not_match": "Error, password does not match",
     "email_has_been_changed": "Email has been changed",
     "an_error_occurred_while_changing_the_email_address": "An error occurred while changing the email address",
-    "shopping_cart": "Shopping Cart"
+    "shopping_cart": "Shopping Cart",
+    "change_your_profile_picture": "change your profile picture",
+    "email_address": "Email address"
 }

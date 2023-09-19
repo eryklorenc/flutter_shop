@@ -769,6 +769,26 @@ class S {
       args: [],
     );
   }
+
+  /// `change your profile picture`
+  String get change_your_profile_picture {
+    return Intl.message(
+      'change your profile picture',
+      name: 'change_your_profile_picture',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email address`
+  String get email_address {
+    return Intl.message(
+      'Email address',
+      name: 'email_address',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
