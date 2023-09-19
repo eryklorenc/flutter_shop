@@ -29,7 +29,7 @@ class ProfilePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 10),
                     child: Text(
-                      'zmień zdjęcie profilowe',
+                      S.of(context).change_your_profile_picture,
                       style: Theme.of(context).xTextTheme.h0,
                     ),
                   ),
@@ -41,7 +41,7 @@ class ProfilePage extends StatelessWidget {
                     child: TextField(
                       readOnly: true,
                       decoration: InputDecoration(
-                        hintText: 'Adres email',
+                        hintText: S.of(context).email_address,
                         filled: true,
                         fillColor: AppColors.white,
                         border: OutlineInputBorder(

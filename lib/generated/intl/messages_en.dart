@@ -36,6 +36,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "change_e_mail": MessageLookupByLibrary.simpleMessage("Change e-mail"),
         "change_password":
             MessageLookupByLibrary.simpleMessage("Change password"),
+        "change_your_profile_picture":
+            MessageLookupByLibrary.simpleMessage("change your profile picture"),
         "choose_a_category":
             MessageLookupByLibrary.simpleMessage("Choose \na category"),
         "colorful_hoodie":
@@ -58,6 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "edit_profile": MessageLookupByLibrary.simpleMessage("Edit profile"),
         "email": MessageLookupByLibrary.simpleMessage("Email@email.com"),
         "email0": MessageLookupByLibrary.simpleMessage("Email"),
+        "email_address": MessageLookupByLibrary.simpleMessage("Email address"),
         "email_has_been_changed":
             MessageLookupByLibrary.simpleMessage("Email has been changed"),
         "error_password_does_not_match": MessageLookupByLibrary.simpleMessage(

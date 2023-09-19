@@ -15,6 +15,13 @@ class MenuScreen extends StatelessWidget {
           key: key,
         );
 
+  final Divider customDivider = const Divider(
+    color: AppColors.white,
+    thickness: 1,
+    endIndent: 50,
+    indent: 70,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -92,12 +99,7 @@ class MenuScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const Divider(
-              color: AppColors.white,
-              thickness: 1,
-              endIndent: 50,
-              indent: 70,
-            ),
+            customDivider,
             ListTile(
               leading: const Icon(
                 Icons.home_sharp,
@@ -121,12 +123,7 @@ class MenuScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const Divider(
-              color: AppColors.white,
-              thickness: 1,
-              endIndent: 50,
-              indent: 70,
-            ),
+            customDivider,
             ListTile(
               leading: const Icon(
                 Icons.phone_android,
@@ -150,12 +147,7 @@ class MenuScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const Divider(
-              color: AppColors.white,
-              thickness: 1,
-              endIndent: 50,
-              indent: 70,
-            ),
+            customDivider,
             ListTile(
               leading: const Icon(
                 Icons.settings,
@@ -182,12 +174,7 @@ class MenuScreen extends StatelessWidget {
             const SizedBox(
               height: 130,
             ),
-            const Divider(
-              color: AppColors.white,
-              thickness: 1,
-              endIndent: 50,
-              indent: 70,
-            ),
+            customDivider,
             ListTile(
               leading: const Icon(
                 Icons.logout,
