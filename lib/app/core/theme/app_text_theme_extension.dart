@@ -23,8 +23,6 @@ class AppTextThemeExtension extends ThemeExtension<AppTextThemeExtension> {
     required this.body6,
     required this.body7,
     required this.notification0,
-    required this.notification1,
-    required this.message0,
     required this.titleLight,
   });
 
@@ -59,10 +57,6 @@ class AppTextThemeExtension extends ThemeExtension<AppTextThemeExtension> {
   final TextStyle titleLight;
 
   final TextStyle notification0;
-
-  final TextStyle notification1;
-
-  final TextStyle message0;
 
   factory AppTextThemeExtension.initialize() => AppTextThemeExtension(
         display0: const TextStyle(
@@ -135,17 +129,6 @@ class AppTextThemeExtension extends ThemeExtension<AppTextThemeExtension> {
           color: AppColors.primary,
           fontSize: 18,
         ),
-        notification1: const TextStyle(
-          color: Colors.white,
-          fontSize: 16,
-          fontWeight: FontWeight.w700,
-          decoration: TextDecoration.underline,
-        ),
-        message0: const TextStyle(
-          color: Colors.black,
-          fontSize: 16,
-          fontWeight: FontWeight.w700,
-        ),
       );
 
   @override
@@ -190,8 +173,6 @@ class AppTextThemeExtension extends ThemeExtension<AppTextThemeExtension> {
       h4: h4 ?? this.h4,
       titleLight: titleLight ?? this.titleLight,
       notification0: notification0 ?? this.notification0,
-      notification1: notification1 ?? this.notification1,
-      message0: message0 ?? this.message0,
     );
   }
 
