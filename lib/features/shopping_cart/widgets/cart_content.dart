@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
+import 'package:flutter_shop/app/core/theme/app_text_theme_extension.dart';
 
 class CartContent extends StatelessWidget {
   const CartContent({
@@ -32,29 +33,20 @@ class CartContent extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   'Hoodie',
-                  style: TextStyle(
-                    color: AppColors.dark,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: Theme.of(context).xTextTheme.h4,
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 3, bottom: 25),
+                Padding(
+                  padding: const EdgeInsets.only(top: 3, bottom: 25),
                   child: Text(
                     '€130.99',
-                    style: TextStyle(
-                      color: AppColors.grey,
-                      fontWeight: FontWeight.w400,
-                    ),
+                    style: Theme.of(context).xTextTheme.titleLight,
                   ),
                 ),
-                const Text(
+                Text(
                   'Size: S',
-                  style: TextStyle(
-                    color: AppColors.dark,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: Theme.of(context).xTextTheme.h4,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 80, top: 40),
@@ -67,12 +59,9 @@ class CartContent extends StatelessWidget {
                           color: AppColors.dark,
                         ),
                       ),
-                      const Text(
+                      Text(
                         '1',
-                        style: TextStyle(
-                          color: AppColors.dark,
-                          fontWeight: FontWeight.w600,
-                        ),
+                        style: Theme.of(context).xTextTheme.h4,
                       ),
                       IconButton(
                         onPressed: () {},

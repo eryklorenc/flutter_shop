@@ -123,7 +123,8 @@ class PrivacyAndSecurityPageState extends State<PrivacyAndSecurityPage> {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content: Text(
-                                      S.of(context).password_has_been_changed),
+                                    S.of(context).password_has_been_changed,
+                                  ),
                                   backgroundColor: AppColors.dark,
                                 ),
                               );
@@ -133,7 +134,8 @@ class PrivacyAndSecurityPageState extends State<PrivacyAndSecurityPage> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                  S.of(context).error_password_does_not_match),
+                                S.of(context).error_password_does_not_match,
+                              ),
                               backgroundColor: AppColors.dark,
                             ),
                           );
@@ -210,9 +212,11 @@ class PrivacyAndSecurityPageState extends State<PrivacyAndSecurityPage> {
                           } else if (state.status == Status.error) {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
-                                content: Text(S
-                                    .of(context)
-                                    .an_error_occurred_while_changing_the_email_address),
+                                content: Text(
+                                  S
+                                      .of(context)
+                                      .an_error_occurred_while_changing_the_email_address,
+                                ),
                                 backgroundColor: AppColors.dark,
                               ),
                             );

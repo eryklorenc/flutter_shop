@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
+import 'package:flutter_shop/app/core/theme/app_text_theme_extension.dart';
 import 'package:flutter_shop/features/home/widgets/best_product.dart';
 import 'package:flutter_shop/generated/l10n.dart';
 
@@ -40,10 +41,7 @@ class BestSellingContent extends StatelessWidget {
                 children: [
                   Text(
                     S.of(context).see_more,
-                    style: const TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: Theme.of(context).xTextTheme.body5,
                   ),
                 ],
               ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
+import 'package:flutter_shop/app/core/theme/app_text_theme_extension.dart';
 import 'package:flutter_shop/features/burger_menu/burger_menu.dart';
 import 'package:flutter_shop/features/home/cubit/home_cubit.dart';
 import 'package:flutter_shop/features/home/widgets/best_selling_content.dart';
@@ -49,11 +50,7 @@ class _HomeState extends State<Home> {
                             children: [
                               Text(
                                 S.of(context).choose_a_category,
-                                style: const TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20,
-                                  color: AppColors.dark,
-                                ),
+                                style: Theme.of(context).xTextTheme.body2,
                               ),
                               Row(
                                 children: [
@@ -74,10 +71,8 @@ class _HomeState extends State<Home> {
                                       },
                                       child: Text(
                                         S.of(context).men,
-                                        style: const TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                        style:
+                                            Theme.of(context).xTextTheme.body3,
                                       ),
                                     ),
                                   ),
@@ -101,10 +96,8 @@ class _HomeState extends State<Home> {
                                       },
                                       child: Text(
                                         S.of(context).women,
-                                        style: const TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                        style:
+                                            Theme.of(context).xTextTheme.body3,
                                       ),
                                     ),
                                   ),
@@ -124,11 +117,7 @@ class _HomeState extends State<Home> {
                             alignment: Alignment.topLeft,
                             child: Text(
                               S.of(context).recommended_for_you,
-                              style: const TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: AppColors.dark,
-                              ),
+                              style: Theme.of(context).xTextTheme.body4,
                             ),
                           ),
                         ),
@@ -146,11 +135,7 @@ class _HomeState extends State<Home> {
                         alignment: Alignment.topLeft,
                         child: Text(
                           S.of(context).best_selling,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            color: AppColors.dark,
-                          ),
+                          style: Theme.of(context).xTextTheme.body4,
                         ),
                       ),
                     ),
