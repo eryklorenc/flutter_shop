@@ -54,23 +54,6 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 40),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        fixedSize: const Size(180, 40),
-                        backgroundColor: AppColors.dark,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                      onPressed: () {},
-                      child: Text(
-                        S.of(context).save,
-                        style: Theme.of(context).xTextTheme.h1,
-                      ),
-                    ),
-                  ),
                 ],
               ),
             ),
