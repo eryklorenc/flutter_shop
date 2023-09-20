@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/app/core/theme/app_text_theme_extension.dart';
+import 'package:flutter_shop/app/core/utils/injection_container.dart';
 import 'package:flutter_shop/features/product/cubit/product_cubit.dart';
 import 'package:flutter_shop/features/product/widgets/components/buy_now_button.dart';
 import 'package:flutter_shop/features/product/widgets/size_selection.dart';
@@ -23,7 +24,7 @@ class ProductPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ProductCubit(),
+      create: (context) => getIt<ProductCubit>(),
       child: Scaffold(
         extendBodyBehindAppBar: true,
         backgroundColor: AppColors.white,

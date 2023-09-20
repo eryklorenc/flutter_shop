@@ -1,9 +1,7 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
-import 'package:flutter_shop/data/datasources/flutter_shop_api_datasource.dart';
-import 'package:flutter_shop/domain/repositories/settings_repository.dart';
+import 'package:flutter_shop/app/core/utils/injection_container.dart';
 import 'package:flutter_shop/features/settings/cubit/settings_cubit.dart';
 
 class PrivacyPolicyPage extends StatelessWidget {
@@ -15,7 +13,7 @@ class PrivacyPolicyPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) =>
-          SettingsCubit(SettingsRepository(FlutterShopApiDatasource(Dio()))),
+          getIt<SettingsCubit>(),
       child: BlocBuilder<SettingsCubit, SettingsState>(
         builder: (context, state) {
           if (state.isLoading) {
