@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop/app/core/common/custom_app_bar.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/features/contact_us/widgets/details_widget.dart';
 import 'package:flutter_shop/generated/l10n.dart';
@@ -11,21 +12,14 @@ class ContactUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(
+        title: S.of(context).contact,
+      ),
       backgroundColor: AppColors.white,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 40),
-          IconButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            icon: const Icon(
-              Icons.arrow_back,
-              size: 33,
-            ),
-            color: AppColors.dark,
-          ),
           const Center(
             child: Padding(
               padding: EdgeInsets.only(top: 10),
