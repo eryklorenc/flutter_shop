@@ -6,6 +6,7 @@ class SettingOption extends StatelessWidget {
   final Icon icon;
   final String title;
   final VoidCallback onTap;
+
   const SettingOption({
     super.key,
     required this.icon,

@@ -4,6 +4,7 @@ import 'package:flutter_shop/app/core/theme/app_colors.dart';
 class DetailsWidget extends StatelessWidget {
   final String text;
   final Icon icon;
+
   const DetailsWidget({
     super.key,
     required this.icon,
