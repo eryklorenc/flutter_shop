@@ -12,8 +12,7 @@ class PrivacyPolicyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) =>
-          getIt<SettingsCubit>(),
+      create: (context) => getIt<SettingsCubit>()..fetchComments(),
       child: BlocBuilder<SettingsCubit, SettingsState>(
         builder: (context, state) {
           if (state.isLoading) {
