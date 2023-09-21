@@ -8,5 +8,7 @@ class ProfilePageState with _$ProfilePageState {
     File? currentImageFile,
     @Default(false) bool isImagePickerActive,
     String? imageFilePath,
+    @Default('') String address,
+    @Default(false) bool isError,
   }) = _ProfilePageState;
 }

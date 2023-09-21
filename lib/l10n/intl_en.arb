@@ -75,5 +75,6 @@
     "change_your_profile_picture": "change your profile picture",
     "email_address": "Email address",
     "contact": "Contact Us",
-    "there_was_an_error": "There was an error: {state.errorMessage}"
+    "there_was_an_error": "There was an error: {state.errorMessage}",
+    "address_not_found": "Address not found"
 }

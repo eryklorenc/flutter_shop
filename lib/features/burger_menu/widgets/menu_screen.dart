@@ -71,12 +71,16 @@ class MenuScreen extends StatelessWidget {
                             const SizedBox(
                               width: 3,
                             ),
-                            Text(
-                              'Rzeszów',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleSmall
-                                  ?.copyWith(color: AppColors.white),
+                            Expanded(
+                              child: Text(
+                                state.isError
+                                    ? S.of(context).address_not_found
+                                    : state.address,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleSmall
+                                    ?.copyWith(color: AppColors.white),
+                              ),
                             ),
                           ],
                         ),

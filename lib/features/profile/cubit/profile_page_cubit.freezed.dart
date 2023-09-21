@@ -21,6 +21,8 @@ mixin _$ProfilePageState {
   File? get currentImageFile => throw _privateConstructorUsedError;
   bool get isImagePickerActive => throw _privateConstructorUsedError;
   String? get imageFilePath => throw _privateConstructorUsedError;
+  String get address => throw _privateConstructorUsedError;
+  bool get isError => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ProfilePageStateCopyWith<ProfilePageState> get copyWith =>
@@ -38,7 +40,9 @@ abstract class $ProfilePageStateCopyWith<$Res> {
       bool isLoading,
       File? currentImageFile,
       bool isImagePickerActive,
-      String? imageFilePath});
+      String? imageFilePath,
+      String address,
+      bool isError});
 }
 
 /// @nodoc
@@ -59,6 +63,8 @@ class _$ProfilePageStateCopyWithImpl<$Res, $Val extends ProfilePageState>
     Object? currentImageFile = freezed,
     Object? isImagePickerActive = null,
     Object? imageFilePath = freezed,
+    Object? address = null,
+    Object? isError = null,
   }) {
     return _then(_value.copyWith(
       errorMessage: null == errorMessage
@@ -81,6 +87,14 @@ class _$ProfilePageStateCopyWithImpl<$Res, $Val extends ProfilePageState>
           ? _value.imageFilePath
           : imageFilePath // ignore: cast_nullable_to_non_nullable
               as String?,
+      address: null == address
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as String,
+      isError: null == isError
+          ? _value.isError
+          : isError // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -98,7 +112,9 @@ abstract class _$$_ProfilePageStateCopyWith<$Res>
       bool isLoading,
       File? currentImageFile,
       bool isImagePickerActive,
-      String? imageFilePath});
+      String? imageFilePath,
+      String address,
+      bool isError});
 }
 
 /// @nodoc
@@ -117,6 +133,8 @@ class __$$_ProfilePageStateCopyWithImpl<$Res>
     Object? currentImageFile = freezed,
     Object? isImagePickerActive = null,
     Object? imageFilePath = freezed,
+    Object? address = null,
+    Object? isError = null,
   }) {
     return _then(_$_ProfilePageState(
       errorMessage: null == errorMessage
@@ -139,6 +157,14 @@ class __$$_ProfilePageStateCopyWithImpl<$Res>
           ? _value.imageFilePath
           : imageFilePath // ignore: cast_nullable_to_non_nullable
               as String?,
+      address: null == address
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as String,
+      isError: null == isError
+          ? _value.isError
+          : isError // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -151,7 +177,9 @@ class _$_ProfilePageState implements _ProfilePageState {
       this.isLoading = false,
       this.currentImageFile,
       this.isImagePickerActive = false,
-      this.imageFilePath});
+      this.imageFilePath,
+      this.address = '',
+      this.isError = false});
 
   @override
   @JsonKey()
@@ -166,10 +194,16 @@ class _$_ProfilePageState implements _ProfilePageState {
   final bool isImagePickerActive;
   @override
   final String? imageFilePath;
+  @override
+  @JsonKey()
+  final String address;
+  @override
+  @JsonKey()
+  final bool isError;
 
   @override
   String toString() {
-    return 'ProfilePageState(errorMessage: $errorMessage, isLoading: $isLoading, currentImageFile: $currentImageFile, isImagePickerActive: $isImagePickerActive, imageFilePath: $imageFilePath)';
+    return 'ProfilePageState(errorMessage: $errorMessage, isLoading: $isLoading, currentImageFile: $currentImageFile, isImagePickerActive: $isImagePickerActive, imageFilePath: $imageFilePath, address: $address, isError: $isError)';
   }
 
   @override
@@ -186,12 +220,14 @@ class _$_ProfilePageState implements _ProfilePageState {
             (identical(other.isImagePickerActive, isImagePickerActive) ||
                 other.isImagePickerActive == isImagePickerActive) &&
             (identical(other.imageFilePath, imageFilePath) ||
-                other.imageFilePath == imageFilePath));
+                other.imageFilePath == imageFilePath) &&
+            (identical(other.address, address) || other.address == address) &&
+            (identical(other.isError, isError) || other.isError == isError));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, errorMessage, isLoading,
-      currentImageFile, isImagePickerActive, imageFilePath);
+      currentImageFile, isImagePickerActive, imageFilePath, address, isError);
 
   @JsonKey(ignore: true)
   @override
@@ -206,7 +242,9 @@ abstract class _ProfilePageState implements ProfilePageState {
       final bool isLoading,
       final File? currentImageFile,
       final bool isImagePickerActive,
-      final String? imageFilePath}) = _$_ProfilePageState;
+      final String? imageFilePath,
+      final String address,
+      final bool isError}) = _$_ProfilePageState;
 
   @override
   String get errorMessage;
@@ -218,6 +256,10 @@ abstract class _ProfilePageState implements ProfilePageState {
   bool get isImagePickerActive;
   @override
   String? get imageFilePath;
+  @override
+  String get address;
+  @override
+  bool get isError;
   @override
   @JsonKey(ignore: true)
   _$$_ProfilePageStateCopyWith<_$_ProfilePageState> get copyWith =>
