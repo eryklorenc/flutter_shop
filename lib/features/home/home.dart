@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/app/core/theme/app_text_theme_extension.dart';
+import 'package:flutter_shop/app/core/utils/injection_container.dart';
 import 'package:flutter_shop/features/burger_menu/burger_menu.dart';
 import 'package:flutter_shop/features/home/cubit/home_cubit.dart';
 import 'package:flutter_shop/features/home/widgets/best_selling_content.dart';
@@ -29,7 +30,7 @@ class _HomeState extends State<Home> {
     return BurgerMenu(
       zoomDrawerController: zoomDrawerController,
       mainScreen: BlocProvider(
-        create: (context) => HomeCubit(),
+        create: (context) => getIt<HomeCubit>(),
         child: BlocBuilder<HomeCubit, HomeState>(
           builder: (context, state) {
             return Scaffold(

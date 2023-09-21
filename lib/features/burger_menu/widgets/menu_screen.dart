@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
+import 'package:flutter_shop/app/core/utils/injection_container.dart';
 import 'package:flutter_shop/features/auth/cubit/auth_cubit.dart';
 import 'package:flutter_shop/features/contact_us/contact_us.dart';
 import 'package:flutter_shop/features/home/home.dart';
@@ -24,7 +25,7 @@ class MenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ProfilePageCubit(),
+      create: (context) => getIt<ProfilePageCubit>(),
       child: BlocBuilder<ProfilePageCubit, ProfilePageState>(
         builder: (context, state) {
           final profileImage = context

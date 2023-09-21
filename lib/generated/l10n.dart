@@ -799,6 +799,16 @@ class S {
       args: [],
     );
   }
+
+  /// `There was an error: {state.errorMessage}`
+  String get there_was_an_error {
+    return Intl.message(
+      'There was an error: {state.errorMessage}',
+      name: 'there_was_an_error',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

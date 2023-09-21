@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/core/common/custom_app_bar.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/app/core/theme/app_text_theme_extension.dart';
+import 'package:flutter_shop/app/core/utils/injection_container.dart';
 import 'package:flutter_shop/features/profile/cubit/profile_page_cubit.dart';
 import 'package:flutter_shop/generated/l10n.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -22,7 +23,7 @@ class _ProfilePageState extends State<ProfilePage> {
     final String? email = FirebaseAuth.instance.currentUser?.email;
 
     return BlocProvider(
-      create: (context) => ProfilePageCubit(),
+      create: (context) => getIt<ProfilePageCubit>(),
       child: BlocBuilder<ProfilePageCubit, ProfilePageState>(
         builder: (context, state) {
           context.read<ProfilePageCubit>().initSharedPreferences();
