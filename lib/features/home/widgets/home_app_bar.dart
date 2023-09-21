@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
-import 'package:flutter_shop/features/shopping_cart/shopping_cart_page.dart';
 import 'package:flutter_shop/generated/l10n.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 
@@ -37,25 +36,6 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
         icon: const Icon(Icons.menu),
         color: AppColors.dark,
       ),
-      actions: [
-        Padding(
-          padding: const EdgeInsets.only(right: 5),
-          child: IconButton(
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => const ShoppingCartPage(),
-                ),
-              );
-            },
-            icon: const Icon(
-              Icons.shopping_cart,
-              size: 30,
-            ),
-            color: AppColors.dark,
-          ),
-        ),
-      ],
     );
   }
 }
