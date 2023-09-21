@@ -118,6 +118,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "sign_up": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "terms_and_conditions":
             MessageLookupByLibrary.simpleMessage("Terms and Conditions"),
+        "there_was_an_error": MessageLookupByLibrary.simpleMessage(
+            "There was an error: {state.errorMessage}"),
         "venom_hoodie": MessageLookupByLibrary.simpleMessage("Venom Hoodie"),
         "welcome_back": MessageLookupByLibrary.simpleMessage("Welcome Back"),
         "women": MessageLookupByLibrary.simpleMessage("Women"),

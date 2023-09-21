@@ -5,6 +5,7 @@ import 'package:flutter_shop/features/profile/profile_page.dart';
 import 'package:flutter_shop/features/settings/widgets/privacy_and_security_page.dart';
 import 'package:flutter_shop/features/settings/widgets/privacy_policy_page.dart';
 import 'package:flutter_shop/features/settings/widgets/setting_option.dart';
+import 'package:flutter_shop/features/settings/widgets/terms_and_conditions.dart';
 import 'package:flutter_shop/generated/l10n.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -95,7 +96,13 @@ class SettingsPage extends StatelessWidget {
                 size: 28,
               ),
               title: S.of(context).terms_and_conditions,
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const TermsAndConditionsPage(),
+                  ),
+                );
+              },
             ),
           ),
         ],

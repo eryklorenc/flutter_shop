@@ -6,8 +6,8 @@ import 'package:flutter_shop/app/core/utils/injection_container.dart';
 import 'package:flutter_shop/features/settings/cubit/settings_cubit.dart';
 import 'package:flutter_shop/generated/l10n.dart';
 
-class PrivacyPolicyPage extends StatelessWidget {
-  const PrivacyPolicyPage({
+class TermsAndConditionsPage extends StatelessWidget {
+  const TermsAndConditionsPage({
     super.key,
   });
 
@@ -26,7 +26,7 @@ class PrivacyPolicyPage extends StatelessWidget {
 
             return Scaffold(
               appBar: CustomAppBar(
-                title: S.of(context).privacy_policy,
+                title: S.of(context).terms_and_conditions,
               ),
               body: ListView.builder(
                 itemCount: comments.length,

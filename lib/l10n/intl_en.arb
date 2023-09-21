@@ -74,5 +74,6 @@
     "shopping_cart": "Shopping Cart",
     "change_your_profile_picture": "change your profile picture",
     "email_address": "Email address",
-    "contact": "Contact Us"
+    "contact": "Contact Us",
+    "there_was_an_error": "There was an error: {state.errorMessage}"
 }
