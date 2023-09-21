@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/core/config/enums.dart';
-import 'package:flutter_shop/domain/models/settings_model.dart';
+import 'package:flutter_shop/domain/models/settings/settings_model.dart';
 import 'package:flutter_shop/domain/repositories/settings_repository.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';

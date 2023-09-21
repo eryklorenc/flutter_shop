@@ -1,5 +1,5 @@
 import 'package:flutter_shop/data/datasources/flutter_shop_api_datasource.dart';
-import 'package:flutter_shop/domain/models/settings_model.dart';
+import 'package:flutter_shop/domain/models/settings/settings_model.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable

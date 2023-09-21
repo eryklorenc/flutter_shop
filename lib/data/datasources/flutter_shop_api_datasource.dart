@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_shop/domain/models/settings_model.dart';
+import 'package:flutter_shop/domain/models/settings/settings_model.dart';
 import 'package:injectable/injectable.dart';
 import 'package:retrofit/http.dart';
 
