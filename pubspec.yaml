@@ -31,6 +31,9 @@ dependencies:
   
   flutter_localizations:
     sdk: flutter
+  geolocator: ^10.0.1
+  rxdart: ^0.27.7
+  geocoding: ^2.1.0
 
 dev_dependencies:
   flutter_test:

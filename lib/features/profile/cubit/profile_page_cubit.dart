@@ -1,5 +1,7 @@
+import 'dart:async';
 import 'dart:io';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_shop/domain/repositories/location_repository.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
@@ -14,8 +16,12 @@ part 'profile_page_cubit.freezed.dart';
 class ProfilePageCubit extends Cubit<ProfilePageState> {
   final ImagePicker _imagePicker = ImagePicker();
   late SharedPreferences _prefs;
+  final LocationRepository _locationRepository;
+  StreamSubscription<String>? _addressSubscription;
 
-  ProfilePageCubit() : super(const ProfilePageState());
+  ProfilePageCubit(this._locationRepository) : super(const ProfilePageState()) {
+    _init();
+  }
 
   Future<void> initSharedPreferences() async {
     _prefs = await SharedPreferences.getInstance();
@@ -60,5 +66,20 @@ class ProfilePageCubit extends Cubit<ProfilePageState> {
 
       _prefs.setString('profile_image_path', pickedFile.path);
     }
+  }
+
+  FutureOr<void> _init() {
+    _locationRepository.getCurrentLocation();
+    _addressSubscription = _locationRepository.addressStream.listen(
+      (address) {
+        emit(state.copyWith(address: address));
+      },
+    );
+  }
+
+  @override
+  Future<void> close() {
+    _addressSubscription?.cancel();
+    return super.close();
   }
 }

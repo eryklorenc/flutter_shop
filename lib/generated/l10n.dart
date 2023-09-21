@@ -809,6 +809,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Address not found`
+  String get address_not_found {
+    return Intl.message(
+      'Address not found',
+      name: 'address_not_found',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
