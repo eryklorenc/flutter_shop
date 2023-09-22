@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/app/core/theme/app_text_theme_extension.dart';
 import 'package:flutter_shop/features/welcome/widgets/components/welcome_button.dart';
+import 'package:flutter_shop/gen/assets.gen.dart';
 import 'package:flutter_shop/generated/l10n.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -15,7 +16,7 @@ class WelcomePage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: const AssetImage('assets/start1.jpg'),
+            image: Assets.start1.image().image,
             colorFilter: ColorFilter.mode(
               AppColors.dark.withOpacity(0.8),
               BlendMode.dstATop,

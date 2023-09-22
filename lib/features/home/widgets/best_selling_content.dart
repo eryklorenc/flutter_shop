@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/app/core/theme/app_text_theme_extension.dart';
 import 'package:flutter_shop/features/home/widgets/best_product.dart';
+import 'package:flutter_shop/gen/assets.gen.dart';
 import 'package:flutter_shop/generated/l10n.dart';
 
 class BestSellingContent extends StatelessWidget {
@@ -16,14 +17,14 @@ class BestSellingContent extends StatelessWidget {
         BestProduct(
           product: S.of(context).orange_hoodie,
           price: S.of(context).price1,
-          image: const AssetImage('assets/start1.jpg'),
+          image: Assets.start1.image().image,
         ),
         Padding(
           padding: const EdgeInsets.only(left: 15),
           child: BestProduct(
             product: S.of(context).red_handbag,
             price: S.of(context).price2,
-            image: const AssetImage('assets/start.jpg'),
+            image: Assets.start.image().image,
           ),
         ),
         Padding(
