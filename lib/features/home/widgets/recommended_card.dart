@@ -3,7 +3,7 @@ import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/features/product/product_page.dart';
 
 class RecommendedCard extends StatelessWidget {
-  final AssetImage image;
+  final ImageProvider image;
   final String price;
   final String name;
 

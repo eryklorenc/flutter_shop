@@ -5,7 +5,7 @@ import 'package:flutter_shop/features/product/product_page.dart';
 class BestProduct extends StatelessWidget {
   final String product;
   final String price;
-  final AssetImage image;
+  final ImageProvider image;
 
   const BestProduct({
     super.key,

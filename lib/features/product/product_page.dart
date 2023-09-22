@@ -9,7 +9,7 @@ import 'package:flutter_shop/features/product/widgets/size_selection.dart';
 import 'package:flutter_shop/generated/l10n.dart';
 
 class ProductPage extends StatelessWidget {
-  final AssetImage image;
+  final ImageProvider image;
   final String price;
   final String name;
 
