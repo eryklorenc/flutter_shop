@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
@@ -31,6 +32,7 @@ class MenuScreen extends StatelessWidget {
           final profileImage = context
               .select((ProfilePageCubit cubit) => cubit.state.currentImageFile);
           context.read<ProfilePageCubit>().initSharedPreferences();
+          final String? email = FirebaseAuth.instance.currentUser?.email;
 
           return Scaffold(
             backgroundColor: AppColors.black,
@@ -43,7 +45,7 @@ class MenuScreen extends StatelessWidget {
                     contentPadding: EdgeInsets.zero,
                     leading: CircleAvatar(
                       radius: 30,
-                      backgroundColor: AppColors.white,
+                      backgroundColor: Colors.transparent,
                       backgroundImage:
                           profileImage != null ? FileImage(profileImage) : null,
                     ),
@@ -52,7 +54,7 @@ class MenuScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          S.of(context).email,
+                          email!,
                           style: Theme.of(context)
                               .textTheme
                               .titleSmall

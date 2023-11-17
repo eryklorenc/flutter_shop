@@ -16,6 +16,7 @@ class SaveButton extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         fixedSize: const Size(200, 48),
+        backgroundColor: AppColors.black,
       ),
       child: Text(
         S.of(context).save,

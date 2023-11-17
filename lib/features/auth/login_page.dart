@@ -33,6 +33,24 @@ class _LoginPageState extends State<LoginPage> {
       child: BlocBuilder<AuthCubit, AuthState>(
         builder: (context, state) {
           return Scaffold(
+            appBar: AppBar(
+              centerTitle: true,
+              leading: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const Icon(
+                  Icons.arrow_back_ios,
+                ),
+              ),
+              title: Text(
+                isCreatingAccount == true
+                    ? S.of(context).sign_up
+                    : S.of(context).sign_in,
+                style: Theme.of(context).xTextTheme.display1,
+              ),
+            ),
+            backgroundColor: AppColors.white,
             resizeToAvoidBottomInset: false,
             body: SingleChildScrollView(
               child: Padding(
@@ -40,40 +58,15 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    const SizedBox(
-                      height: 50,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        IconButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          icon: const Icon(
-                            Icons.arrow_back_ios,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 110),
-                          child: Text(
-                            isCreatingAccount == true
-                                ? S.of(context).sign_up
-                                : S.of(context).sign_in,
-                            style: Theme.of(context).xTextTheme.display0,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 150,
-                    ),
-                    Text(
-                      isCreatingAccount == true
-                          ? S.of(context).register_account
-                          : S.of(context).welcome_back,
-                      style: Theme.of(context).xTextTheme.display1,
-                      textAlign: TextAlign.center,
+                    Padding(
+                      padding: const EdgeInsets.only(top: 120),
+                      child: Text(
+                        isCreatingAccount == true
+                            ? S.of(context).register_account
+                            : S.of(context).welcome_back,
+                        style: Theme.of(context).xTextTheme.display1,
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                     Text(
                       isCreatingAccount == true
@@ -81,20 +74,17 @@ class _LoginPageState extends State<LoginPage> {
                           : S.of(context).sign_in_with_your_email_and_password,
                       style: Theme.of(context).xTextTheme.body1,
                     ),
-                    const SizedBox(
-                      height: 50,
-                    ),
-                    AuthTextField(
-                      controller: emailController,
-                      suffixIcon: const Icon(
-                        Icons.email_outlined,
-                        color: AppColors.dark,
+                    Padding(
+                      padding: const EdgeInsets.only(top: 50, bottom: 30),
+                      child: AuthTextField(
+                        controller: emailController,
+                        suffixIcon: const Icon(
+                          Icons.email_outlined,
+                          color: AppColors.dark,
+                        ),
+                        obscureText: false,
+                        hintText: S.of(context).email0,
                       ),
-                      obscureText: false,
-                      hintText: S.of(context).email0,
-                    ),
-                    const SizedBox(
-                      height: 30,
                     ),
                     AuthTextField(
                       controller: passwordController,
@@ -152,9 +142,6 @@ class _LoginPageState extends State<LoginPage> {
                           }
                         },
                       ),
-                    ),
-                    const SizedBox(
-                      height: 15,
                     ),
                     if (isCreatingAccount == true) ...[
                       AuthButton(

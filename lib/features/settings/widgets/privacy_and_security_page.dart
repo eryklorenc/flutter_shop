@@ -37,6 +37,7 @@ class PrivacyAndSecurityPageState extends State<PrivacyAndSecurityPage> {
       child: BlocBuilder<AuthCubit, AuthState>(
         builder: (context, state) {
           return Scaffold(
+            backgroundColor: AppColors.white,
             appBar: CustomAppBar(
               title: S.of(context).privacy_security,
             ),
@@ -71,7 +72,7 @@ class PrivacyAndSecurityPageState extends State<PrivacyAndSecurityPage> {
                       text: S.of(context).current_password,
                       suffixIcon: const Icon(
                         Icons.lock_outline,
-                        color: AppColors.greyLight,
+                        color: AppColors.dark,
                       ),
                     ),
                   ),
@@ -84,7 +85,7 @@ class PrivacyAndSecurityPageState extends State<PrivacyAndSecurityPage> {
                       text: S.of(context).new_password,
                       suffixIcon: const Icon(
                         Icons.lock_outline,
-                        color: AppColors.greyLight,
+                        color: AppColors.dark,
                       ),
                     ),
                   ),
@@ -97,7 +98,7 @@ class PrivacyAndSecurityPageState extends State<PrivacyAndSecurityPage> {
                       text: S.of(context).confirm_new_password,
                       suffixIcon: const Icon(
                         Icons.lock_outline,
-                        color: AppColors.greyLight,
+                        color: AppColors.dark,
                       ),
                     ),
                   ),
@@ -172,7 +173,7 @@ class PrivacyAndSecurityPageState extends State<PrivacyAndSecurityPage> {
                       text: S.of(context).new_e_mail,
                       suffixIcon: const Icon(
                         Icons.mail_outline,
-                        color: AppColors.greyLight,
+                        color: AppColors.dark,
                       ),
                     ),
                   ),
@@ -185,7 +186,7 @@ class PrivacyAndSecurityPageState extends State<PrivacyAndSecurityPage> {
                       text: S.of(context).password,
                       suffixIcon: const Icon(
                         Icons.mail_outline,
-                        color: AppColors.greyLight,
+                        color: AppColors.dark,
                       ),
                     ),
                   ),

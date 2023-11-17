@@ -15,6 +15,9 @@ class BuyNowButton extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColors.black,
+        ),
         onPressed: onPressed,
         child: Padding(
           padding: const EdgeInsets.symmetric(

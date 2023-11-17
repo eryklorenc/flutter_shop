@@ -25,6 +25,7 @@ class PrivacyPolicyPage extends StatelessWidget {
             final comments = state.comments;
 
             return Scaffold(
+              backgroundColor: AppColors.white,
               appBar: CustomAppBar(
                 title: S.of(context).privacy_policy,
               ),

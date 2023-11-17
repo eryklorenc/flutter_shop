@@ -28,6 +28,7 @@ class _ProfilePageState extends State<ProfilePage> {
         builder: (context, state) {
           context.read<ProfilePageCubit>().initSharedPreferences();
           return Scaffold(
+            backgroundColor: AppColors.white,
             appBar: CustomAppBar(
               title: S.of(context).profile,
             ),

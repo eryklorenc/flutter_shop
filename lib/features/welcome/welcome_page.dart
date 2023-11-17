@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop/app/core/theme/app_colors.dart';
 import 'package:flutter_shop/app/core/theme/app_text_theme_extension.dart';
+import 'package:flutter_shop/features/auth/auth_page.dart';
 import 'package:flutter_shop/features/welcome/widgets/components/welcome_button.dart';
 import 'package:flutter_shop/gen/assets.gen.dart';
 import 'package:flutter_shop/generated/l10n.dart';
@@ -24,15 +25,12 @@ class WelcomePage extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 90,
-              ),
-              const SizedBox(height: 460),
-              Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 300, bottom: 10),
+              child: Center(
                 child: Text(
                   S
                       .of(context)
@@ -40,12 +38,17 @@ class WelcomePage extends StatelessWidget {
                   style: Theme.of(context).xTextTheme.notification0,
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
-              const WelcomeButton(),
-            ],
-          ),
+            ),
+            WelcomeButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const AuthPage(),
+                  ),
+                );
+              },
+            ),
+          ],
         ),
       ),
     );

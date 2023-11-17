@@ -41,6 +41,7 @@ class ProductPage extends StatelessWidget {
               icon: const Icon(
                 Icons.arrow_back,
                 size: 35,
+                color: AppColors.white,
               ),
               color: AppColors.dark,
             ),
